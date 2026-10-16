@@ -1,0 +1,446 @@
+# Unit 1 · Part 3 — Bản dịch câu/cụm cho mục Đọc bài
+# Claude soạn ngày 16/10/2026 — CHỜ GIÁO VIÊN DUYỆT.
+# Khi duyệt xong câu nào, thêm dòng "@by gv" vào khối của câu đó.
+
+# ---------- Reading 1 ----------
+Everyone has a story worth telling, yet few of us ever set aside the time to write it down.
+= Ai cũng có một câu chuyện đáng kể, vậy mà ít ai trong chúng ta dành thời gian để viết nó ra.
+  Everyone has a story worth telling, || Ai cũng có một câu chuyện đáng kể,
+  yet few of us ever set aside the time || vậy mà ít ai trong chúng ta dành thời gian
+  to write it down. || để viết nó ra.
+
+Led by award-winning biographer Tran Minh Chau, this workshop will help you turn scattered memories into polished, compelling chapters.
+= Do nhà viết tiểu sử từng đoạt giải Trần Minh Châu hướng dẫn, khóa học này sẽ giúp bạn biến những ký ức rời rạc thành những chương sách trau chuốt, cuốn hút.
+  Led by award-winning biographer Tran Minh Chau, || Do nhà viết tiểu sử từng đoạt giải Trần Minh Châu hướng dẫn,
+  this workshop will help you || khóa học này sẽ giúp bạn
+  turn scattered memories || biến những ký ức rời rạc
+  into polished, compelling chapters. || thành những chương sách trau chuốt, cuốn hút.
+
+Whether you have written before or are a complete beginner, the course is designed to meet your needs.
+= Dù bạn đã từng viết hay hoàn toàn mới bắt đầu, khóa học được thiết kế để đáp ứng nhu cầu của bạn.
+  Whether you have written before || Dù bạn đã từng viết
+  or are a complete beginner, || hay hoàn toàn mới bắt đầu,
+  the course is designed to meet your needs. || khóa học được thiết kế để đáp ứng nhu cầu của bạn.
+
+Over six weeks, you will learn how to interview family members, structure a narrative and write about painful experiences without losing your reader.
+= Trong sáu tuần, bạn sẽ học cách phỏng vấn người thân, xây dựng bố cục câu chuyện và viết về những trải nghiệm đau buồn mà không làm người đọc mất hứng.
+  Over six weeks, || Trong sáu tuần,
+  you will learn how to interview family members, || bạn sẽ học cách phỏng vấn người thân,
+  structure a narrative || xây dựng bố cục câu chuyện
+  and write about painful experiences || và viết về những trải nghiệm đau buồn
+  without losing your reader. || mà không làm người đọc mất hứng.
+
+Each participant will receive personalised feedback on up to 5,000 words.
+= Mỗi học viên sẽ được nhận xét riêng cho bài viết dài tối đa 5.000 từ.
+  Each participant will receive personalised feedback || Mỗi học viên sẽ được nhận xét riêng
+  on up to 5,000 words. || cho bài viết dài tối đa 5.000 từ.
+
+As places are limited to twelve, early registration is strongly advised.
+= Vì chỉ nhận tối đa mười hai người, bạn nên đăng ký sớm.
+  As places are limited to twelve, || Vì chỉ nhận tối đa mười hai người,
+  early registration is strongly advised. || bạn rất nên đăng ký sớm.
+
+By the end, you will have the first draft of a story that your grandchildren will treasure for years to come.
+= Đến cuối khóa, bạn sẽ có bản thảo đầu tiên của một câu chuyện mà con cháu bạn sẽ trân trọng trong nhiều năm tới.
+  By the end, || Đến cuối khóa,
+  you will have the first draft of a story || bạn sẽ có bản thảo đầu tiên của một câu chuyện
+  that your grandchildren will treasure || mà con cháu bạn sẽ trân trọng
+  for years to come. || trong nhiều năm tới.
+
+# ---------- Reading 2 ----------
+The Provincial Museum is compiling an oral history archive of local people whose courage and kindness have gone largely unrecognised.
+= Bảo tàng tỉnh đang xây dựng một kho lưu trữ lịch sử truyền miệng về những người dân địa phương mà lòng dũng cảm và sự tử tế của họ phần lớn chưa được ghi nhận.
+  The Provincial Museum is compiling || Bảo tàng tỉnh đang xây dựng
+  an oral history archive of local people || một kho lưu trữ lịch sử truyền miệng về những người dân địa phương
+  whose courage and kindness || mà lòng dũng cảm và sự tử tế của họ
+  have gone largely unrecognised. || phần lớn chưa được ghi nhận.
+
+Eligibility: We welcome stories about anyone, living or deceased, whose actions made a lasting difference to the community.
+= Đối tượng: Chúng tôi đón nhận câu chuyện về bất kỳ ai, còn sống hay đã khuất, có việc làm tạo nên sự thay đổi lâu dài cho cộng đồng.
+  Eligibility: || Đối tượng:
+  We welcome stories about anyone, || Chúng tôi đón nhận câu chuyện về bất kỳ ai,
+  living or deceased, || còn sống hay đã khuất,
+  whose actions made a lasting difference || có việc làm tạo nên sự thay đổi lâu dài
+  to the community. || cho cộng đồng.
+
+Format: Submissions may be written accounts, audio recordings or photographs, provided they are accompanied by a short description.
+= Hình thức: Bài gửi có thể là bài viết, bản ghi âm hoặc ảnh chụp, miễn là có kèm một đoạn mô tả ngắn.
+  Format: || Hình thức:
+  Submissions may be written accounts, || Bài gửi có thể là bài viết,
+  audio recordings or photographs, || bản ghi âm hoặc ảnh chụp,
+  provided they are accompanied by a short description. || miễn là có kèm một đoạn mô tả ngắn.
+
+Consent: Where the subject is still alive, written consent must be obtained before any material is published.
+= Sự đồng ý: Nếu nhân vật vẫn còn sống, phải có sự đồng ý bằng văn bản trước khi công bố bất kỳ tư liệu nào.
+  Consent: || Sự đồng ý:
+  Where the subject is still alive, || Nếu nhân vật vẫn còn sống,
+  written consent must be obtained || phải có sự đồng ý bằng văn bản
+  before any material is published. || trước khi công bố bất kỳ tư liệu nào.
+
+Deadline: All contributions should be submitted by 31 January.
+= Hạn chót: Mọi bài đóng góp cần được gửi trước ngày 31 tháng Một.
+  Deadline: || Hạn chót:
+  All contributions should be submitted || Mọi bài đóng góp cần được gửi
+  by 31 January. || trước ngày 31 tháng Một.
+
+Selected stories will be displayed in a special exhibition, which the museum hopes will inspire a new generation of volunteers.
+= Những câu chuyện được chọn sẽ được trưng bày trong một triển lãm đặc biệt, mà bảo tàng hy vọng sẽ truyền cảm hứng cho một thế hệ tình nguyện viên mới.
+  Selected stories will be displayed || Những câu chuyện được chọn sẽ được trưng bày
+  in a special exhibition, || trong một triển lãm đặc biệt,
+  which the museum hopes || mà bảo tàng hy vọng
+  will inspire a new generation of volunteers. || sẽ truyền cảm hứng cho một thế hệ tình nguyện viên mới.
+
+# ---------- Reading 4 ----------
+On 19 August 2010, at the International Congress of Mathematicians in Hyderabad, India, Ngo Bao Chau became the first Vietnamese ever to receive the Fields Medal.
+= Ngày 19 tháng 8 năm 2010, tại Đại hội Toán học Quốc tế ở Hyderabad, Ấn Độ, Ngô Bảo Châu trở thành người Việt Nam đầu tiên nhận Huy chương Fields.
+  On 19 August 2010, || Ngày 19 tháng 8 năm 2010,
+  at the International Congress of Mathematicians || tại Đại hội Toán học Quốc tế
+  in Hyderabad, India, || ở Hyderabad, Ấn Độ,
+  Ngo Bao Chau became the first Vietnamese ever || Ngô Bảo Châu trở thành người Việt Nam đầu tiên
+  to receive the Fields Medal. || nhận Huy chương Fields.
+
+Awarded every four years to no more than four mathematicians under the age of 40, the medal is widely regarded as the most prestigious honour in mathematics.
+= Được trao bốn năm một lần cho không quá bốn nhà toán học dưới 40 tuổi, huy chương này được xem rộng rãi là vinh dự cao quý nhất của toán học.
+  Awarded every four years || Được trao bốn năm một lần
+  to no more than four mathematicians under the age of 40, || cho không quá bốn nhà toán học dưới 40 tuổi,
+  the medal is widely regarded || huy chương này được xem rộng rãi
+  as the most prestigious honour in mathematics. || là vinh dự cao quý nhất của toán học.
+
+According to Vietnam Pictorial, his win made Viet Nam only the second Asian nation, after Japan, to have a mathematician honoured in this way.
+= Theo Báo Ảnh Việt Nam, chiến thắng của ông giúp Việt Nam trở thành quốc gia châu Á thứ hai, sau Nhật Bản, có nhà toán học được vinh danh theo cách này.
+  According to Vietnam Pictorial, || Theo Báo Ảnh Việt Nam,
+  his win made Viet Nam only the second Asian nation, || chiến thắng của ông giúp Việt Nam trở thành quốc gia châu Á thứ hai,
+  after Japan, || sau Nhật Bản,
+  to have a mathematician honoured in this way. || có nhà toán học được vinh danh theo cách này.
+
+Chau's talent had been evident long before then.
+= Tài năng của Châu đã bộc lộ từ rất lâu trước đó.
+
+Born in Hanoi in 1972 into a family with a strong tradition in science, he won a gold medal at the International Mathematical Olympiad in 1988 with a perfect score of 42 out of 42.
+= Sinh năm 1972 tại Hà Nội trong một gia đình có truyền thống khoa học, ông giành huy chương vàng Olympic Toán học Quốc tế năm 1988 với điểm tuyệt đối 42/42.
+  Born in Hanoi in 1972 || Sinh năm 1972 tại Hà Nội
+  into a family with a strong tradition in science, || trong một gia đình có truyền thống khoa học,
+  he won a gold medal || ông giành huy chương vàng
+  at the International Mathematical Olympiad in 1988 || Olympic Toán học Quốc tế năm 1988
+  with a perfect score of 42 out of 42. || với điểm tuyệt đối 42/42.
+
+A year later, he won a second gold medal in Germany, making him the first Vietnamese to win two IMO gold medals.
+= Một năm sau, ông giành huy chương vàng thứ hai tại Đức, trở thành người Việt Nam đầu tiên đoạt hai huy chương vàng IMO.
+  A year later, || Một năm sau,
+  he won a second gold medal in Germany, || ông giành huy chương vàng thứ hai tại Đức,
+  making him the first Vietnamese || trở thành người Việt Nam đầu tiên
+  to win two IMO gold medals. || đoạt hai huy chương vàng IMO.
+
+That same year, he received a scholarship from the French government to study in Paris.
+= Cũng trong năm đó, ông nhận học bổng của Chính phủ Pháp để sang học tại Paris.
+  That same year, || Cũng trong năm đó,
+  he received a scholarship from the French government || ông nhận học bổng của Chính phủ Pháp
+  to study in Paris. || để sang học tại Paris.
+
+In France, Chau rose rapidly through the academic world.
+= Ở Pháp, Châu nhanh chóng thăng tiến trong giới học thuật.
+  In France, || Ở Pháp,
+  Chau rose rapidly through the academic world. || Châu nhanh chóng thăng tiến trong giới học thuật.
+
+He completed his doctorate at 25 and, in 2004, shared the Clay Research Award with his former teacher, Gerard Laumon.
+= Ông hoàn thành luận án tiến sĩ năm 25 tuổi và, năm 2004, cùng thầy cũ Gérard Laumon nhận Giải thưởng Nghiên cứu Clay.
+  He completed his doctorate at 25 || Ông hoàn thành luận án tiến sĩ năm 25 tuổi
+  and, in 2004, || và, năm 2004,
+  shared the Clay Research Award || cùng nhận Giải thưởng Nghiên cứu Clay
+  with his former teacher, Gerard Laumon. || với thầy cũ của mình, Gérard Laumon.
+
+His most celebrated achievement was the proof of the Fundamental Lemma, a technical result that had puzzled mathematicians for around 30 years.
+= Thành tựu nổi tiếng nhất của ông là chứng minh Bổ đề Cơ bản, một kết quả chuyên môn đã làm các nhà toán học bối rối trong khoảng 30 năm.
+  His most celebrated achievement || Thành tựu nổi tiếng nhất của ông
+  was the proof of the Fundamental Lemma, || là chứng minh Bổ đề Cơ bản,
+  a technical result || một kết quả chuyên môn
+  that had puzzled mathematicians for around 30 years. || đã làm các nhà toán học bối rối trong khoảng 30 năm.
+
+The lemma lies at the heart of the Langlands programme, an ambitious vision that links many branches of modern mathematics, and in 2009 Time magazine listed his work among the top ten scientific discoveries of the year.
+= Bổ đề này nằm ở trung tâm của Chương trình Langlands, một tầm nhìn đầy tham vọng kết nối nhiều nhánh của toán học hiện đại, và năm 2009, tạp chí Time đã xếp công trình của ông vào mười phát minh khoa học tiêu biểu nhất của năm.
+  The lemma lies at the heart of the Langlands programme, || Bổ đề này nằm ở trung tâm của Chương trình Langlands,
+  an ambitious vision || một tầm nhìn đầy tham vọng
+  that links many branches of modern mathematics, || kết nối nhiều nhánh của toán học hiện đại,
+  and in 2009 Time magazine listed his work || và năm 2009, tạp chí Time đã xếp công trình của ông
+  among the top ten scientific discoveries of the year. || vào mười phát minh khoa học tiêu biểu nhất của năm.
+
+Despite his international fame, Chau has never forgotten his roots.
+= Dù nổi tiếng thế giới, Châu chưa bao giờ quên cội nguồn của mình.
+  Despite his international fame, || Dù nổi tiếng thế giới,
+  Chau has never forgotten his roots. || Châu chưa bao giờ quên cội nguồn của mình.
+
+Even while living and working abroad, he has devoted considerable time to training young Vietnamese mathematicians.
+= Ngay cả khi sống và làm việc ở nước ngoài, ông vẫn dành nhiều thời gian đào tạo các nhà toán học trẻ Việt Nam.
+  Even while living and working abroad, || Ngay cả khi sống và làm việc ở nước ngoài,
+  he has devoted considerable time || ông vẫn dành nhiều thời gian
+  to training young Vietnamese mathematicians. || để đào tạo các nhà toán học trẻ Việt Nam.
+
+In 2005, at just 33, he became the youngest person in Viet Nam ever to be awarded the title of professor.
+= Năm 2005, khi mới 33 tuổi, ông trở thành người trẻ nhất ở Việt Nam từng được phong hàm giáo sư.
+  In 2005, at just 33, || Năm 2005, khi mới 33 tuổi,
+  he became the youngest person in Viet Nam ever || ông trở thành người trẻ nhất ở Việt Nam
+  to be awarded the title of professor. || từng được phong hàm giáo sư.
+
+For millions of students, he remains living proof that talent, when combined with years of hard work, can carry a person from a Hanoi classroom to the very top of the scientific world.
+= Với hàng triệu học sinh, ông mãi là minh chứng sống rằng tài năng, khi đi cùng nhiều năm khổ luyện, có thể đưa một người từ lớp học ở Hà Nội lên tới đỉnh cao của thế giới khoa học.
+  For millions of students, || Với hàng triệu học sinh,
+  he remains living proof || ông mãi là minh chứng sống
+  that talent, when combined with years of hard work, || rằng tài năng, khi đi cùng nhiều năm khổ luyện,
+  can carry a person from a Hanoi classroom || có thể đưa một người từ lớp học ở Hà Nội
+  to the very top of the scientific world. || lên tới đỉnh cao của thế giới khoa học.
+
+# ---------- Reading 5 ----------
+Many of Africa's independence leaders, including Kwame Nkrumah of Ghana and Jomo Kenyatta of Kenya, followed a similar path: protest, arrest, imprisonment and, finally, national leadership.
+= Nhiều nhà lãnh đạo phong trào giành độc lập ở châu Phi, trong đó có Kwame Nkrumah của Ghana và Jomo Kenyatta của Kenya, đều đi theo một con đường tương tự: biểu tình, bị bắt, bị cầm tù và cuối cùng là lãnh đạo đất nước.
+  Many of Africa's independence leaders, || Nhiều nhà lãnh đạo phong trào giành độc lập ở châu Phi,
+  including Kwame Nkrumah of Ghana and Jomo Kenyatta of Kenya, || trong đó có Kwame Nkrumah của Ghana và Jomo Kenyatta của Kenya,
+  followed a similar path: || đều đi theo một con đường tương tự:
+  protest, arrest, imprisonment || biểu tình, bị bắt, bị cầm tù
+  and, finally, national leadership. || và cuối cùng là lãnh đạo đất nước.
+
+Nelson Mandela's journey was the most striking of all.
+= Hành trình của Nelson Mandela là đáng chú ý nhất.
+  Nelson Mandela's journey || Hành trình của Nelson Mandela
+  was the most striking of all. || là đáng chú ý nhất.
+
+Arrested in 1962, he spent 27 years behind bars, 18 of them on Robben Island, before becoming the first Black president of a democratic, multiracial South Africa.
+= Bị bắt năm 1962, ông ngồi tù 27 năm, trong đó 18 năm ở đảo Robben, trước khi trở thành tổng thống da màu đầu tiên của một Nam Phi dân chủ, đa sắc tộc.
+  Arrested in 1962, || Bị bắt năm 1962,
+  he spent 27 years behind bars, || ông ngồi tù 27 năm,
+  18 of them on Robben Island, || trong đó 18 năm ở đảo Robben,
+  before becoming the first Black president || trước khi trở thành tổng thống da màu đầu tiên
+  of a democratic, multiracial South Africa. || của một Nam Phi dân chủ, đa sắc tộc.
+
+Robben Island, a rocky island about 11 kilometres off Cape Town, was known as a "prison within a prison".
+= Đảo Robben, một hòn đảo đá cách Cape Town khoảng 11 km, được gọi là "nhà tù trong nhà tù".
+  Robben Island, || Đảo Robben,
+  a rocky island about 11 kilometres off Cape Town, || một hòn đảo đá cách Cape Town khoảng 11 km,
+  was known as a "prison within a prison". || được gọi là "nhà tù trong nhà tù".
+
+Inmates were forced to break rocks in a quarry, yet the island also gave them something unexpected: time to read, debate and reflect.
+= Tù nhân bị buộc phải đập đá ở mỏ đá, nhưng hòn đảo cũng cho họ một điều bất ngờ: thời gian để đọc, tranh luận và suy ngẫm.
+  Inmates were forced to break rocks in a quarry, || Tù nhân bị buộc phải đập đá ở mỏ đá,
+  yet the island also gave them something unexpected: || nhưng hòn đảo cũng cho họ một điều bất ngờ:
+  time to read, debate and reflect. || thời gian để đọc, tranh luận và suy ngẫm.
+
+Prisoners jokingly called it the "University of Robben Island".
+= Các tù nhân đùa gọi nơi đây là "Đại học đảo Robben".
+  Prisoners jokingly called it || Các tù nhân đùa gọi nơi đây là
+  the "University of Robben Island". || "Đại học đảo Robben".
+
+Mandela himself later said that the long years of confinement had sharpened his thinking and given him a more realistic view of his society.
+= Chính Mandela sau này nói rằng những năm dài bị giam cầm đã mài sắc tư duy và cho ông cái nhìn thực tế hơn về xã hội của mình.
+  Mandela himself later said || Chính Mandela sau này nói
+  that the long years of confinement || rằng những năm dài bị giam cầm
+  had sharpened his thinking || đã mài sắc tư duy của ông
+  and given him a more realistic view of his society. || và cho ông cái nhìn thực tế hơn về xã hội của mình.
+
+Before his arrest, he admitted, he had been overly optimistic about how quickly the struggle against apartheid could succeed.
+= Ông thừa nhận rằng trước khi bị bắt, ông đã quá lạc quan về việc cuộc đấu tranh chống chế độ phân biệt chủng tộc có thể thành công nhanh đến đâu.
+  Before his arrest, he admitted, || Ông thừa nhận rằng trước khi bị bắt,
+  he had been overly optimistic || ông đã quá lạc quan
+  about how quickly the struggle against apartheid || về việc cuộc đấu tranh chống chế độ phân biệt chủng tộc
+  could succeed. || có thể thành công nhanh đến đâu.
+
+From as early as 1972, the authorities offered to free Mandela if he would renounce violence, but he refused, arguing that it was the government's own actions that determined the movement's methods.
+= Ngay từ năm 1972, chính quyền đã đề nghị trả tự do cho Mandela nếu ông từ bỏ bạo lực, nhưng ông từ chối, lập luận rằng chính hành động của chính phủ mới quyết định phương thức đấu tranh của phong trào.
+  From as early as 1972, || Ngay từ năm 1972,
+  the authorities offered to free Mandela || chính quyền đã đề nghị trả tự do cho Mandela
+  if he would renounce violence, || nếu ông từ bỏ bạo lực,
+  but he refused, || nhưng ông từ chối,
+  arguing that it was the government's own actions || lập luận rằng chính hành động của chính phủ
+  that determined the movement's methods. || mới quyết định phương thức đấu tranh của phong trào.
+
+Cut off from the media, he led through personal contact instead.
+= Bị cắt đứt với truyền thông, ông lãnh đạo bằng cách tiếp xúc trực tiếp với từng người.
+  Cut off from the media, || Bị cắt đứt với truyền thông,
+  he led through personal contact instead. || ông lãnh đạo bằng cách tiếp xúc trực tiếp với từng người.
+
+He made a point of understanding the fears of others, including his Afrikaner guards, whom he impressed with his firmness, courtesy and knowledge of the law.
+= Ông luôn cố gắng thấu hiểu nỗi sợ của người khác, kể cả những cai ngục người Afrikaner, những người ông gây ấn tượng bằng sự kiên định, lịch thiệp và hiểu biết về luật pháp.
+  He made a point of understanding the fears of others, || Ông luôn cố gắng thấu hiểu nỗi sợ của người khác,
+  including his Afrikaner guards, || kể cả những cai ngục người Afrikaner,
+  whom he impressed with his firmness, courtesy || những người mà ông gây ấn tượng bằng sự kiên định, lịch thiệp
+  and knowledge of the law. || và hiểu biết về luật pháp.
+
+His colleague Walter Sisulu would later describe these patient conversations with the guards as the true beginning of the negotiations that ended apartheid.
+= Người đồng chí Walter Sisulu sau này mô tả những cuộc trò chuyện kiên nhẫn với cai ngục ấy là khởi đầu thực sự của các cuộc đàm phán chấm dứt chế độ phân biệt chủng tộc.
+  His colleague Walter Sisulu would later describe || Người đồng chí Walter Sisulu sau này mô tả
+  these patient conversations with the guards || những cuộc trò chuyện kiên nhẫn với cai ngục ấy
+  as the true beginning of the negotiations || là khởi đầu thực sự của các cuộc đàm phán
+  that ended apartheid. || chấm dứt chế độ phân biệt chủng tộc.
+
+Prison also deepened Mandela's belief that a lasting future for South Africa could only be built on law rather than armed conflict.
+= Nhà tù cũng củng cố niềm tin của Mandela rằng một tương lai bền vững cho Nam Phi chỉ có thể xây dựng trên luật pháp chứ không phải xung đột vũ trang.
+  Prison also deepened Mandela's belief || Nhà tù cũng củng cố niềm tin của Mandela
+  that a lasting future for South Africa || rằng một tương lai bền vững cho Nam Phi
+  could only be built on law || chỉ có thể xây dựng trên luật pháp
+  rather than armed conflict. || chứ không phải xung đột vũ trang.
+
+He came to see the island as a kind of laboratory in which people of different races could learn to understand one another.
+= Dần dần, ông coi hòn đảo như một kiểu phòng thí nghiệm, nơi những con người thuộc các chủng tộc khác nhau có thể học cách hiểu nhau.
+  He came to see the island || Dần dần, ông coi hòn đảo
+  as a kind of laboratory || như một kiểu phòng thí nghiệm
+  in which people of different races || nơi những con người thuộc các chủng tộc khác nhau
+  could learn to understand one another. || có thể học cách hiểu nhau.
+
+The prison's commander in 1971 later recalled that he had never sensed any desire for revenge in Mandela.
+= Viên chỉ huy nhà tù năm 1971 sau này nhớ lại rằng ông chưa bao giờ cảm thấy ở Mandela chút mong muốn trả thù nào.
+  The prison's commander in 1971 later recalled || Viên chỉ huy nhà tù năm 1971 sau này nhớ lại
+  that he had never sensed any desire for revenge || rằng ông chưa bao giờ cảm thấy chút mong muốn trả thù nào
+  in Mandela. || ở Mandela.
+
+After his release, Mandela put this attitude into practice: he reassured white South Africans that they would be safe, visited the widows of former leaders who had persecuted him and publicly supported mostly white sports teams.
+= Sau khi được trả tự do, Mandela đã biến thái độ ấy thành hành động: ông trấn an người Nam Phi da trắng rằng họ sẽ được an toàn, đến thăm góa phụ của những nhà lãnh đạo từng đàn áp ông và công khai ủng hộ các đội thể thao phần lớn là người da trắng.
+  After his release, || Sau khi được trả tự do,
+  Mandela put this attitude into practice: || Mandela đã biến thái độ ấy thành hành động:
+  he reassured white South Africans that they would be safe, || ông trấn an người Nam Phi da trắng rằng họ sẽ được an toàn,
+  visited the widows of former leaders who had persecuted him || đến thăm góa phụ của những nhà lãnh đạo từng đàn áp ông
+  and publicly supported mostly white sports teams. || và công khai ủng hộ các đội thể thao phần lớn là người da trắng.
+
+His example remains a powerful lesson in how to build peace without bitterness.
+= Tấm gương của ông vẫn là bài học mạnh mẽ về cách xây dựng hòa bình mà không mang hận thù.
+  His example remains a powerful lesson || Tấm gương của ông vẫn là bài học mạnh mẽ
+  in how to build peace without bitterness. || về cách xây dựng hòa bình mà không mang hận thù.
+
+# ---------- Reading 6 ----------
+For decades, the story of how the structure of DNA was discovered has been told in much the same way.
+= Suốt nhiều thập kỷ, câu chuyện về việc cấu trúc DNA được khám phá như thế nào vẫn được kể theo gần như cùng một cách.
+  For decades, || Suốt nhiều thập kỷ,
+  the story of how the structure of DNA was discovered || câu chuyện về việc cấu trúc DNA được khám phá như thế nào
+  has been told in much the same way. || vẫn được kể theo gần như cùng một cách.
+
+In 1953, James Watson and Francis Crick built their famous double-helix model, apparently with the help of an X-ray image known as Photograph 51, taken by Rosalind Franklin and her student Raymond Gosling at King's College London.
+= Năm 1953, James Watson và Francis Crick dựng mô hình chuỗi xoắn kép nổi tiếng, dường như nhờ vào một ảnh X-quang có tên Bức ảnh 51 do Rosalind Franklin và học trò Raymond Gosling chụp tại Đại học King's College London.
+  In 1953, || Năm 1953,
+  James Watson and Francis Crick built their famous double-helix model, || James Watson và Francis Crick dựng mô hình chuỗi xoắn kép nổi tiếng,
+  apparently with the help of an X-ray image || dường như nhờ vào một ảnh X-quang
+  known as Photograph 51, || có tên Bức ảnh 51,
+  taken by Rosalind Franklin and her student Raymond Gosling || do Rosalind Franklin và học trò Raymond Gosling chụp
+  at King's College London. || tại Đại học King's College London.
+
+According to the popular account, Franklin failed to grasp what her own image revealed, while Watson, shown the picture without her knowledge, understood it at a glance.
+= Theo cách kể phổ biến, Franklin đã không hiểu bức ảnh của chính mình cho thấy điều gì, trong khi Watson, được cho xem bức ảnh mà bà không hề biết, lại hiểu ngay chỉ trong nháy mắt.
+  According to the popular account, || Theo cách kể phổ biến,
+  Franklin failed to grasp what her own image revealed, || Franklin đã không hiểu bức ảnh của chính mình cho thấy điều gì,
+  while Watson, || trong khi Watson,
+  shown the picture without her knowledge, || được cho xem bức ảnh mà bà không hề biết,
+  understood it at a glance. || lại hiểu ngay chỉ trong nháy mắt.
+
+Franklin, in other words, has been cast as the great victim of modern science.
+= Nói cách khác, Franklin bị khắc họa như nạn nhân lớn của khoa học hiện đại.
+  Franklin, in other words, || Nói cách khác, Franklin
+  has been cast as the great victim of modern science. || bị khắc họa như nạn nhân lớn của khoa học hiện đại.
+
+In a 2023 article in Nature, the historians Matthew Cobb and Nathaniel Comfort argue that this version of events is largely a myth.
+= Trong một bài báo năm 2023 trên tạp chí Nature, hai nhà sử học Matthew Cobb và Nathaniel Comfort lập luận rằng cách kể này phần lớn chỉ là huyền thoại.
+  In a 2023 article in Nature, || Trong một bài báo năm 2023 trên tạp chí Nature,
+  the historians Matthew Cobb and Nathaniel Comfort argue || hai nhà sử học Matthew Cobb và Nathaniel Comfort lập luận
+  that this version of events is largely a myth. || rằng cách kể này phần lớn chỉ là huyền thoại.
+
+They point out that it rests heavily on Watson's own 1968 memoir, The Double Helix, which was written to entertain as much as to inform.
+= Họ chỉ ra rằng cách kể ấy dựa nhiều vào chính cuốn hồi ký năm 1968 của Watson, "Chuỗi xoắn kép", vốn được viết để giải trí không kém gì để cung cấp thông tin.
+  They point out that it rests heavily || Họ chỉ ra rằng cách kể ấy dựa nhiều
+  on Watson's own 1968 memoir, The Double Helix, || vào chính cuốn hồi ký năm 1968 của Watson, "Chuỗi xoắn kép" (The Double Helix),
+  which was written to entertain as much as to inform. || vốn được viết để giải trí không kém gì để cung cấp thông tin.
+
+Its dramatic scenes have since been repeated in countless books, plays and films.
+= Những cảnh đầy kịch tính trong đó từ đấy được lặp lại trong vô số sách, vở kịch và phim.
+  Its dramatic scenes have since been repeated || Những cảnh đầy kịch tính trong đó từ đấy được lặp lại
+  in countless books, plays and films. || trong vô số sách, vở kịch và phim.
+
+More importantly, they argue, the account implies that Franklin, a highly skilled chemist, was unable to interpret her own data, a claim they find deeply implausible.
+= Quan trọng hơn, theo họ, cách kể đó ngụ ý rằng Franklin, một nhà hóa học rất giỏi, không thể giải thích dữ liệu của chính mình, một nhận định mà họ thấy hết sức khó tin.
+  More importantly, they argue, || Quan trọng hơn, theo họ,
+  the account implies that Franklin, || cách kể đó ngụ ý rằng Franklin,
+  a highly skilled chemist, || một nhà hóa học rất giỏi,
+  was unable to interpret her own data, || không thể giải thích dữ liệu của chính mình,
+  a claim they find deeply implausible. || một nhận định mà họ thấy hết sức khó tin.
+
+Cobb and Comfort explain that Franklin was studying two forms of DNA that she named A and B.
+= Cobb và Comfort giải thích rằng Franklin khi đó đang nghiên cứu hai dạng DNA mà bà đặt tên là A và B.
+  Cobb and Comfort explain || Cobb và Comfort giải thích
+  that Franklin was studying two forms of DNA || rằng Franklin khi đó đang nghiên cứu hai dạng DNA
+  that she named A and B. || mà bà đặt tên là A và B.
+
+Because the A form produced sharper and more detailed patterns, she concentrated on it, a sensible choice for a chemist but one that slowed her progress, since the blurrier B form better reflects conditions inside living cells.
+= Vì dạng A cho ra hình ảnh nhiễu xạ sắc nét và chi tiết hơn, bà tập trung vào nó, một lựa chọn hợp lý với một nhà hóa học nhưng lại làm chậm tiến độ của bà, bởi dạng B mờ hơn mới phản ánh đúng hơn điều kiện bên trong tế bào sống.
+  Because the A form produced sharper and more detailed patterns, || Vì dạng A cho ra hình ảnh nhiễu xạ sắc nét và chi tiết hơn,
+  she concentrated on it, || bà tập trung vào nó,
+  a sensible choice for a chemist || một lựa chọn hợp lý với một nhà hóa học
+  but one that slowed her progress, || nhưng lại làm chậm tiến độ của bà,
+  since the blurrier B form || bởi dạng B mờ hơn
+  better reflects conditions inside living cells. || mới phản ánh đúng hơn điều kiện bên trong tế bào sống.
+
+In any case, they note, a single photograph could not reveal a precise structure: Photograph 51 showed only that the B form was probably helical, which nobody disputed.
+= Dù sao đi nữa, họ lưu ý, một bức ảnh đơn lẻ không thể cho thấy một cấu trúc chính xác: Bức ảnh 51 chỉ cho thấy dạng B có lẽ có hình xoắn, điều mà không ai tranh cãi.
+  In any case, they note, || Dù sao đi nữa, họ lưu ý,
+  a single photograph could not reveal a precise structure: || một bức ảnh đơn lẻ không thể cho thấy một cấu trúc chính xác:
+  Photograph 51 showed only || Bức ảnh 51 chỉ cho thấy
+  that the B form was probably helical, || dạng B có lẽ có hình xoắn,
+  which nobody disputed. || điều mà không ai tranh cãi.
+
+Far more useful to Watson and Crick was a 1952 research report summarising the King's group's findings, including Franklin's precise measurements; the report reached the Cambridge pair through informal channels.
+= Hữu ích hơn nhiều đối với Watson và Crick là một báo cáo nghiên cứu năm 1952 tóm tắt kết quả của nhóm King's, bao gồm các số đo chính xác của Franklin; bản báo cáo này đến tay bộ đôi ở Cambridge qua con đường không chính thức.
+  Far more useful to Watson and Crick || Hữu ích hơn nhiều đối với Watson và Crick
+  was a 1952 research report || là một báo cáo nghiên cứu năm 1952
+  summarising the King's group's findings, || tóm tắt kết quả của nhóm King's,
+  including Franklin's precise measurements; || bao gồm các số đo chính xác của Franklin;
+  the report reached the Cambridge pair || bản báo cáo này đến tay bộ đôi ở Cambridge
+  through informal channels. || qua con đường không chính thức.
+
+The historians also highlight an unpublished draft of a 1953 article for Time magazine.
+= Các nhà sử học cũng nhấn mạnh một bản thảo chưa từng công bố của một bài báo năm 1953 viết cho tạp chí Time.
+  The historians also highlight an unpublished draft || Các nhà sử học cũng nhấn mạnh một bản thảo chưa từng công bố
+  of a 1953 article for Time magazine. || của một bài báo năm 1953 viết cho tạp chí Time.
+
+Written by the journalist Joan Bruce, it described two teams, one made up of Maurice Wilkins and Franklin and the other of Watson and Crick, who checked and built on each other's work.
+= Do nhà báo Joan Bruce viết, bài báo mô tả hai nhóm, một nhóm gồm Maurice Wilkins và Franklin, nhóm kia gồm Watson và Crick, cùng kiểm tra và phát triển dựa trên công trình của nhau.
+  Written by the journalist Joan Bruce, || Do nhà báo Joan Bruce viết,
+  it described two teams, || bài báo mô tả hai nhóm,
+  one made up of Maurice Wilkins and Franklin || một nhóm gồm Maurice Wilkins và Franklin
+  and the other of Watson and Crick, || và nhóm kia gồm Watson và Crick,
+  who checked and built on each other's work. || cùng kiểm tra và phát triển dựa trên công trình của nhau.
+
+In this version, Franklin appeared not as a victim but as a peer.
+= Trong cách kể này, Franklin xuất hiện không phải như một nạn nhân mà như một người ngang hàng.
+  In this version, || Trong cách kể này,
+  Franklin appeared not as a victim but as a peer. || Franklin xuất hiện không phải như một nạn nhân mà như một người ngang hàng.
+
+The article was never published, and Cobb and Comfort suggest that, had it appeared, the discovery might have been remembered as a joint achievement from the start.
+= Bài báo chưa bao giờ được đăng, và Cobb cùng Comfort cho rằng, giá như nó được đăng, phát hiện này có lẽ đã được ghi nhớ như một thành tựu chung ngay từ đầu.
+  The article was never published, || Bài báo chưa bao giờ được đăng,
+  and Cobb and Comfort suggest that, || và Cobb cùng Comfort cho rằng,
+  had it appeared, || giá như nó được đăng,
+  the discovery might have been remembered || phát hiện này có lẽ đã được ghi nhớ
+  as a joint achievement from the start. || như một thành tựu chung ngay từ đầu.
+
+None of this means that Franklin solved the structure alone.
+= Tất cả những điều này không có nghĩa là Franklin một mình giải được cấu trúc ấy.
+  None of this means || Tất cả những điều này không có nghĩa là
+  that Franklin solved the structure alone. || Franklin một mình giải được cấu trúc ấy.
+
+She did not work out how the bases paired up or that the two strands ran in opposite directions.
+= Bà không tìm ra cách các bazơ bắt cặp với nhau, cũng không phát hiện hai mạch chạy theo hai chiều ngược nhau.
+  She did not work out how the bases paired up || Bà không tìm ra cách các bazơ bắt cặp với nhau
+  or that the two strands ran in opposite directions. || hay việc hai mạch chạy theo hai chiều ngược nhau.
+
+But she distinguished the two forms of DNA, measured key features of its structure and even reasoned independently that DNA could carry biological information.
+= Nhưng bà đã phân biệt hai dạng DNA, đo được các đặc điểm then chốt trong cấu trúc của nó và thậm chí còn độc lập suy luận rằng DNA có thể mang thông tin sinh học.
+  But she distinguished the two forms of DNA, || Nhưng bà đã phân biệt hai dạng DNA,
+  measured key features of its structure || đo được các đặc điểm then chốt trong cấu trúc của nó
+  and even reasoned independently || và thậm chí còn độc lập suy luận
+  that DNA could carry biological information. || rằng DNA có thể mang thông tin sinh học.
+
+For Cobb and Comfort, she deserves to be remembered not as the wronged heroine of the double helix but as one of four scientists who solved it together.
+= Theo Cobb và Comfort, bà xứng đáng được nhớ đến không phải như nữ anh hùng bị đối xử bất công của chuỗi xoắn kép, mà như một trong bốn nhà khoa học đã cùng nhau giải được nó.
+  For Cobb and Comfort, || Theo Cobb và Comfort,
+  she deserves to be remembered || bà xứng đáng được nhớ đến
+  not as the wronged heroine of the double helix || không phải như nữ anh hùng bị đối xử bất công của chuỗi xoắn kép,
+  but as one of four scientists who solved it together. || mà như một trong bốn nhà khoa học đã cùng nhau giải được nó.
+
+That more accurate story, they argue, matters precisely because Franklin remains a powerful role model for women in science.
+= Theo họ, câu chuyện chính xác hơn ấy quan trọng chính vì Franklin vẫn là một hình mẫu đầy sức truyền cảm hứng cho phụ nữ làm khoa học.
+  That more accurate story, they argue, || Theo họ, câu chuyện chính xác hơn ấy
+  matters precisely because Franklin remains || quan trọng chính vì Franklin vẫn là
+  a powerful role model for women in science. || một hình mẫu đầy sức truyền cảm hứng cho phụ nữ làm khoa học.

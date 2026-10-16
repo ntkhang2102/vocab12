@@ -1,0 +1,427 @@
+# Unit 1 · Part 1 — Bản dịch câu/cụm cho mục Đọc bài
+# Claude soạn ngày 16/10/2026 — CHỜ GIÁO VIÊN DUYỆT.
+# Khi duyệt xong câu nào, thêm dòng "@by gv" vào khối của câu đó.
+
+# ---------- Reading 1 ----------
+Not all heroes are famous.
+= Không phải người hùng nào cũng nổi tiếng.
+  Not all heroes || Không phải người hùng nào
+  are famous. || cũng nổi tiếng.
+
+Some of them live on our street.
+= Một số người trong họ sống ngay trên con phố của chúng ta.
+  Some of them || Một số người trong họ
+  live on our street. || sống ngay trên con phố của chúng ta.
+
+Our exhibition tells the stories of 30 ordinary people in Da Nang who have done extraordinary things for their community.
+= Triển lãm của chúng tôi kể câu chuyện của 30 người bình thường ở Đà Nẵng, những người đã làm những việc phi thường cho cộng đồng của mình.
+  Our exhibition tells the stories || Triển lãm của chúng tôi kể câu chuyện
+  of 30 ordinary people in Da Nang || của 30 người bình thường ở Đà Nẵng
+  who have done extraordinary things || những người đã làm những việc phi thường
+  for their community. || cho cộng đồng của mình.
+
+You will meet a retired teacher who has taught poor children for free for 20 years, and a young man who set up a blood donation club after his mother's illness.
+= Bạn sẽ gặp một thầy giáo về hưu đã dạy miễn phí cho trẻ em nghèo suốt 20 năm, và một chàng trai trẻ đã lập câu lạc bộ hiến máu sau khi mẹ anh bị bệnh.
+  You will meet a retired teacher || Bạn sẽ gặp một thầy giáo về hưu
+  who has taught poor children for free || người đã dạy miễn phí cho trẻ em nghèo
+  for 20 years, || suốt 20 năm,
+  and a young man || và một chàng trai trẻ
+  who set up a blood donation club || đã lập câu lạc bộ hiến máu
+  after his mother's illness. || sau khi mẹ anh bị bệnh.
+
+Each photo comes with a short story, so you can learn how these people overcame hardship and kept helping others.
+= Mỗi bức ảnh đi kèm một câu chuyện ngắn, để bạn biết những con người này đã vượt qua gian khó và tiếp tục giúp đỡ người khác như thế nào.
+  Each photo comes with a short story, || Mỗi bức ảnh đi kèm một câu chuyện ngắn,
+  so you can learn || để bạn có thể biết
+  how these people overcame hardship || những con người này đã vượt qua gian khó
+  and kept helping others. || và tiếp tục giúp đỡ người khác như thế nào.
+
+The exhibition is open every day from 8 a.m. to 6 p.m. until 30 November.
+= Triển lãm mở cửa hằng ngày từ 8 giờ sáng đến 6 giờ chiều cho đến ngày 30 tháng 11.
+  The exhibition is open every day || Triển lãm mở cửa hằng ngày
+  from 8 a.m. to 6 p.m. || từ 8 giờ sáng đến 6 giờ chiều
+  until 30 November. || cho đến ngày 30 tháng 11.
+
+Visitors can also write a thank-you card to the person they admire most.
+= Khách tham quan cũng có thể viết thiệp cảm ơn gửi người mà họ ngưỡng mộ nhất.
+  Visitors can also write a thank-you card || Khách tham quan cũng có thể viết thiệp cảm ơn
+  to the person they admire most. || gửi người mà họ ngưỡng mộ nhất.
+
+Come and get inspired!
+= Hãy đến và tiếp thêm cảm hứng!
+
+# ---------- Reading 2 ----------
+Our grandparents' memories are a treasure.
+= Ký ức của ông bà chúng ta là một kho báu.
+  Our grandparents' memories || Ký ức của ông bà chúng ta
+  are a treasure. || là một kho báu.
+
+Before they are lost, why not record them?
+= Trước khi những ký ức ấy mất đi, sao không ghi lại chúng?
+  Before they are lost, || Trước khi chúng mất đi,
+  why not record them? || sao không ghi lại chúng?
+
+Here are some tips:
+= Sau đây là một vài mẹo:
+
+Prepare: Write a list of questions about their childhood, their school days and the hardest time they went through.
+= Chuẩn bị: Viết danh sách câu hỏi về thời thơ ấu, những ngày đi học và khoảng thời gian khó khăn nhất mà họ đã trải qua.
+  Prepare: || Chuẩn bị:
+  Write a list of questions || Viết danh sách câu hỏi
+  about their childhood, their school days || về thời thơ ấu, những ngày đi học
+  and the hardest time they went through. || và khoảng thời gian khó khăn nhất mà họ đã trải qua.
+
+Listen: Let the person speak freely and try not to interrupt them.
+= Lắng nghe: Hãy để người đó nói thoải mái và cố gắng đừng ngắt lời họ.
+  Listen: || Lắng nghe:
+  Let the person speak freely || Hãy để người đó nói thoải mái
+  and try not to interrupt them. || và cố gắng đừng ngắt lời họ.
+
+Record: Ask for permission before you record the conversation on your phone.
+= Ghi âm: Hãy xin phép trước khi ghi âm cuộc trò chuyện bằng điện thoại.
+  Record: || Ghi âm:
+  Ask for permission || Hãy xin phép
+  before you record the conversation on your phone. || trước khi ghi âm cuộc trò chuyện bằng điện thoại.
+
+Share: With their agreement, turn the story into a short book that the whole family can enjoy.
+= Chia sẻ: Khi được họ đồng ý, hãy biến câu chuyện thành một cuốn sách nhỏ mà cả gia đình đều có thể đọc.
+  Share: || Chia sẻ:
+  With their agreement, || Khi được họ đồng ý,
+  turn the story into a short book || hãy biến câu chuyện thành một cuốn sách nhỏ
+  that the whole family can enjoy. || mà cả gia đình đều có thể đọc.
+
+You may be surprised to discover how much your relatives have achieved in their lives.
+= Bạn có thể sẽ ngạc nhiên khi biết người thân của mình đã đạt được bao nhiêu điều trong cuộc đời.
+  You may be surprised to discover || Bạn có thể sẽ ngạc nhiên khi biết
+  how much your relatives have achieved || người thân của mình đã đạt được bao nhiêu điều
+  in their lives. || trong cuộc đời.
+
+# ---------- Reading 4 ----------
+Nguyen Ngoc Ky was born in 1947 in a poor farming village in Nam Dinh Province.
+= Nguyễn Ngọc Ký sinh năm 1947 tại một làng quê nghèo làm nông ở tỉnh Nam Định.
+  Nguyen Ngoc Ky was born in 1947 || Nguyễn Ngọc Ký sinh năm 1947
+  in a poor farming village || tại một làng quê nghèo làm nông
+  in Nam Dinh Province. || ở tỉnh Nam Định.
+
+When he was four years old, a serious illness left both of his arms paralysed.
+= Khi cậu bốn tuổi, một trận ốm nặng đã khiến hai tay cậu bị liệt.
+  When he was four years old, || Khi cậu bốn tuổi,
+  a serious illness || một trận ốm nặng
+  left both of his arms paralysed. || đã khiến cả hai tay cậu bị liệt.
+
+Unable to hold a pen, the little boy cried for days as he watched his friends walk to school.
+= Không thể cầm bút, cậu bé khóc suốt nhiều ngày khi nhìn các bạn đi bộ đến trường.
+  Unable to hold a pen, || Không thể cầm bút,
+  the little boy cried for days || cậu bé khóc suốt nhiều ngày
+  as he watched his friends walk to school. || khi nhìn các bạn đi bộ đến trường.
+
+One day, he picked up a piece of chalk with his toes and began to copy letters on the ground.
+= Một hôm, cậu dùng ngón chân kẹp một mẩu phấn và bắt đầu tập chép chữ lên mặt đất.
+  One day, || Một hôm,
+  he picked up a piece of chalk with his toes || cậu dùng ngón chân kẹp một mẩu phấn
+  and began to copy letters on the ground. || và bắt đầu tập chép chữ lên mặt đất.
+
+He practised for hours every day, even when his feet became sore.
+= Cậu luyện tập hàng giờ mỗi ngày, ngay cả khi đôi chân đã đau nhức.
+  He practised for hours every day, || Cậu luyện tập hàng giờ mỗi ngày,
+  even when his feet became sore. || ngay cả khi đôi chân đã đau nhức.
+
+His teacher was so moved by his determination that she allowed him to join the class.
+= Cô giáo xúc động trước quyết tâm của cậu đến mức cho phép cậu vào học cùng lớp.
+  His teacher was so moved by his determination || Cô giáo xúc động trước quyết tâm của cậu
+  that she allowed him to join the class. || đến mức cho phép cậu vào học cùng lớp.
+
+Using only his feet, Ky finished school with excellent results.
+= Chỉ bằng đôi chân, Ký đã học hết phổ thông với kết quả xuất sắc.
+  Using only his feet, || Chỉ bằng đôi chân,
+  Ky finished school with excellent results. || Ký đã học hết phổ thông với kết quả xuất sắc.
+
+He later studied literature at university in Hanoi and became a teacher, a job that he loved for the rest of his life.
+= Sau đó ông học ngành văn ở một trường đại học tại Hà Nội và trở thành thầy giáo, công việc mà ông yêu thích suốt đời.
+  He later studied literature || Sau đó ông học ngành văn
+  at university in Hanoi || ở một trường đại học tại Hà Nội
+  and became a teacher, || và trở thành thầy giáo,
+  a job that he loved for the rest of his life. || công việc mà ông yêu thích suốt đời.
+
+His students soon forgot about his disability and remembered only his lively lessons.
+= Học trò của ông chẳng bao lâu đã quên đi khuyết tật của thầy và chỉ còn nhớ những bài giảng sinh động.
+  His students soon forgot about his disability || Học trò của ông chẳng bao lâu đã quên đi khuyết tật của thầy
+  and remembered only his lively lessons. || và chỉ còn nhớ những bài giảng sinh động.
+
+Ky also wrote many books, including an autobiography about his school days, which inspired many young readers.
+= Ông Ký còn viết nhiều sách, trong đó có cuốn tự truyện về những năm đi học, cuốn sách đã truyền cảm hứng cho nhiều bạn đọc trẻ.
+  Ky also wrote many books, || Ông Ký còn viết nhiều sách,
+  including an autobiography about his school days, || trong đó có cuốn tự truyện về những năm đi học,
+  which inspired many young readers. || cuốn sách đã truyền cảm hứng cho nhiều bạn đọc trẻ.
+
+For millions of Vietnamese students, he became a living example of the saying "Where there is a will, there is a way."
+= Với hàng triệu học sinh Việt Nam, ông trở thành tấm gương sống cho câu nói "Có chí thì nên."
+  For millions of Vietnamese students, || Với hàng triệu học sinh Việt Nam,
+  he became a living example of the saying || ông trở thành tấm gương sống cho câu nói
+  "Where there is a will, there is a way." || "Có chí thì nên."
+
+Even in his old age, he often visited schools to encourage children with disabilities.
+= Ngay cả khi tuổi đã cao, ông vẫn thường đến thăm các trường học để động viên trẻ em khuyết tật.
+  Even in his old age, || Ngay cả khi tuổi đã cao,
+  he often visited schools || ông vẫn thường đến thăm các trường học
+  to encourage children with disabilities. || để động viên trẻ em khuyết tật.
+
+# ---------- Reading 5 ----------
+Marie Curie was born Maria Sklodowska in Warsaw, Poland, in 1867.
+= Marie Curie tên khai sinh là Maria Sklodowska, sinh năm 1867 tại Warsaw, Ba Lan.
+  Marie Curie was born Maria Sklodowska || Marie Curie tên khai sinh là Maria Sklodowska,
+  in Warsaw, Poland, in 1867. || sinh năm 1867 tại Warsaw, Ba Lan.
+
+At that time, women in Poland were not allowed to go to university, so Maria and her older sister made a deal: Maria would work as a teacher to pay for her sister's medical studies in Paris, and later her sister would help her in return.
+= Thời đó, phụ nữ ở Ba Lan không được phép vào đại học, vì vậy Maria và chị gái đã thỏa thuận với nhau: Maria sẽ đi dạy học để trả tiền cho chị học y ở Paris, rồi sau đó chị sẽ giúp lại em.
+  At that time, || Thời đó,
+  women in Poland were not allowed to go to university, || phụ nữ ở Ba Lan không được phép vào đại học,
+  so Maria and her older sister made a deal: || vì vậy Maria và chị gái đã thỏa thuận với nhau:
+  Maria would work as a teacher || Maria sẽ đi dạy học
+  to pay for her sister's medical studies in Paris, || để trả tiền cho chị học y ở Paris,
+  and later her sister would help her in return. || rồi sau đó chị sẽ giúp lại em.
+
+In 1891, Maria finally moved to Paris and began studying physics and mathematics at the Sorbonne.
+= Năm 1891, cuối cùng Maria cũng đến Paris và bắt đầu học vật lý và toán tại Đại học Sorbonne.
+  In 1891, || Năm 1891,
+  Maria finally moved to Paris || cuối cùng Maria cũng đến Paris
+  and began studying physics and mathematics || và bắt đầu học vật lý và toán
+  at the Sorbonne. || tại Đại học Sorbonne.
+
+She was so poor that she sometimes fainted from hunger, but she finished top of her class.
+= Bà nghèo đến mức có lúc ngất xỉu vì đói, nhưng vẫn tốt nghiệp đứng đầu lớp.
+  She was so poor || Bà nghèo
+  that she sometimes fainted from hunger, || đến mức có lúc ngất xỉu vì đói,
+  but she finished top of her class. || nhưng vẫn tốt nghiệp đứng đầu lớp.
+
+In Paris, she met Pierre Curie, a quiet scientist who shared her love of research.
+= Ở Paris, bà gặp Pierre Curie, một nhà khoa học trầm lặng cũng đam mê nghiên cứu như bà.
+  In Paris, || Ở Paris,
+  she met Pierre Curie, || bà gặp Pierre Curie,
+  a quiet scientist || một nhà khoa học trầm lặng
+  who shared her love of research. || cũng đam mê nghiên cứu như bà.
+
+They married in 1895 and worked side by side in a cold, leaky shed.
+= Họ kết hôn năm 1895 và cùng nhau làm việc trong một nhà kho lạnh lẽo, dột nát.
+  They married in 1895 || Họ kết hôn năm 1895
+  and worked side by side || và cùng nhau làm việc
+  in a cold, leaky shed. || trong một nhà kho lạnh lẽo, dột nát.
+
+In 1898, they discovered two new elements, polonium and radium.
+= Năm 1898, họ phát hiện ra hai nguyên tố mới là poloni và radi.
+  In 1898, || Năm 1898,
+  they discovered two new elements, || họ phát hiện ra hai nguyên tố mới
+  polonium and radium. || là poloni và radi.
+
+Polonium was named after Marie's homeland, Poland.
+= Poloni được đặt theo tên quê hương của Marie là Ba Lan.
+  Polonium was named after || Poloni được đặt theo tên
+  Marie's homeland, Poland. || quê hương của Marie là Ba Lan.
+
+In 1903, the couple shared the Nobel Prize in Physics, and Marie became the first woman ever to win a Nobel Prize.
+= Năm 1903, hai vợ chồng cùng nhận giải Nobel Vật lý, và Marie trở thành người phụ nữ đầu tiên từng đoạt giải Nobel.
+  In 1903, || Năm 1903,
+  the couple shared the Nobel Prize in Physics, || hai vợ chồng cùng nhận giải Nobel Vật lý,
+  and Marie became the first woman ever || và Marie trở thành người phụ nữ đầu tiên
+  to win a Nobel Prize. || từng đoạt giải Nobel.
+
+Tragedy came in 1906, when Pierre was killed in a street accident.
+= Bi kịch ập đến vào năm 1906, khi Pierre qua đời trong một tai nạn trên đường phố.
+  Tragedy came in 1906, || Bi kịch ập đến vào năm 1906,
+  when Pierre was killed in a street accident. || khi Pierre qua đời trong một tai nạn trên đường phố.
+
+Marie was heartbroken, but she did not give up her work.
+= Marie đau đớn tột cùng, nhưng bà không từ bỏ công việc của mình.
+  Marie was heartbroken, || Marie đau đớn tột cùng,
+  but she did not give up her work. || nhưng bà không từ bỏ công việc của mình.
+
+She took over his teaching position and became the first woman to teach at the Sorbonne.
+= Bà tiếp quản vị trí giảng dạy của chồng và trở thành người phụ nữ đầu tiên giảng dạy tại Sorbonne.
+  She took over his teaching position || Bà tiếp quản vị trí giảng dạy của chồng
+  and became the first woman to teach at the Sorbonne. || và trở thành người phụ nữ đầu tiên giảng dạy tại Sorbonne.
+
+In 1911, she won a second Nobel Prize, this time in Chemistry.
+= Năm 1911, bà đoạt giải Nobel thứ hai, lần này ở lĩnh vực Hóa học.
+  In 1911, || Năm 1911,
+  she won a second Nobel Prize, || bà đoạt giải Nobel thứ hai,
+  this time in Chemistry. || lần này ở lĩnh vực Hóa học.
+
+Even today, she is the only person to have won Nobel Prizes in two different sciences.
+= Cho đến tận hôm nay, bà vẫn là người duy nhất từng đoạt giải Nobel ở hai ngành khoa học khác nhau.
+  Even today, || Cho đến tận hôm nay,
+  she is the only person to have won Nobel Prizes || bà vẫn là người duy nhất từng đoạt giải Nobel
+  in two different sciences. || ở hai ngành khoa học khác nhau.
+
+During the First World War, Curie used her knowledge to help injured soldiers.
+= Trong Chiến tranh thế giới thứ nhất, Curie đã dùng kiến thức của mình để giúp đỡ những người lính bị thương.
+  During the First World War, || Trong Chiến tranh thế giới thứ nhất,
+  Curie used her knowledge || Curie đã dùng kiến thức của mình
+  to help injured soldiers. || để giúp đỡ những người lính bị thương.
+
+She designed small vans with X-ray machines inside, which doctors could drive close to the battlefields.
+= Bà thiết kế những chiếc xe tải nhỏ có đặt máy X-quang bên trong, để các bác sĩ có thể lái đến gần chiến trường.
+  She designed small vans || Bà thiết kế những chiếc xe tải nhỏ
+  with X-ray machines inside, || có đặt máy X-quang bên trong,
+  which doctors could drive close to the battlefields. || để các bác sĩ có thể lái đến gần chiến trường.
+
+These vans, nicknamed "little Curies", helped doctors to examine more than a million soldiers.
+= Những chiếc xe này, được gọi vui là "những Curie nhỏ", đã giúp các bác sĩ khám cho hơn một triệu binh sĩ.
+  These vans, nicknamed "little Curies", || Những chiếc xe này, được gọi vui là "những Curie nhỏ",
+  helped doctors to examine more than a million soldiers. || đã giúp các bác sĩ khám cho hơn một triệu binh sĩ.
+
+Sadly, years of working with radium damaged her health, and she died in 1934.
+= Đáng buồn thay, nhiều năm làm việc với radi đã hủy hoại sức khỏe của bà, và bà qua đời năm 1934.
+  Sadly, || Đáng buồn thay,
+  years of working with radium damaged her health, || nhiều năm làm việc với radi đã hủy hoại sức khỏe của bà,
+  and she died in 1934. || và bà qua đời năm 1934.
+
+Her notebooks are still so radioactive that they are kept in special lead boxes.
+= Những cuốn sổ ghi chép của bà đến nay vẫn nhiễm phóng xạ đến mức phải cất trong những hộp chì đặc biệt.
+  Her notebooks are still so radioactive || Những cuốn sổ ghi chép của bà đến nay vẫn nhiễm phóng xạ
+  that they are kept in special lead boxes. || đến mức phải cất trong những hộp chì đặc biệt.
+
+# ---------- Reading 6 ----------
+Helen Keller was born in 1880 in a small town in Alabama, in the United States.
+= Helen Keller sinh năm 1880 tại một thị trấn nhỏ ở bang Alabama, nước Mỹ.
+  Helen Keller was born in 1880 || Helen Keller sinh năm 1880
+  in a small town in Alabama, || tại một thị trấn nhỏ ở bang Alabama,
+  in the United States. || nước Mỹ.
+
+She was a healthy baby, but when she was 19 months old, a serious illness left her unable to see or hear.
+= Bà chào đời là một em bé khỏe mạnh, nhưng khi được 19 tháng tuổi, một trận ốm nặng đã khiến bà không thể nhìn và nghe được nữa.
+  She was a healthy baby, || Bà chào đời là một em bé khỏe mạnh,
+  but when she was 19 months old, || nhưng khi được 19 tháng tuổi,
+  a serious illness || một trận ốm nặng
+  left her unable to see or hear. || đã khiến bà không thể nhìn và nghe được nữa.
+
+Because she could not hear words, she also did not learn to speak.
+= Vì không nghe được lời nói, bà cũng không học nói được.
+  Because she could not hear words, || Vì không nghe được lời nói,
+  she also did not learn to speak. || bà cũng không học nói được.
+
+As she grew older, Helen became more and more frustrated.
+= Càng lớn, Helen càng trở nên bực bội.
+  As she grew older, || Càng lớn,
+  Helen became more and more frustrated. || Helen càng trở nên bực bội.
+
+She often screamed, kicked and broke things when people did not understand what she wanted.
+= Cô bé thường la hét, đá và đập vỡ đồ đạc khi mọi người không hiểu cô muốn gì.
+  She often screamed, kicked and broke things || Cô bé thường la hét, đá và đập vỡ đồ đạc
+  when people did not understand what she wanted. || khi mọi người không hiểu cô muốn gì.
+
+Her parents searched for help, and in 1887 a young teacher named Anne Sullivan arrived at their home.
+= Cha mẹ cô tìm kiếm sự giúp đỡ, và năm 1887, một cô giáo trẻ tên là Anne Sullivan đã đến nhà họ.
+  Her parents searched for help, || Cha mẹ cô tìm kiếm sự giúp đỡ,
+  and in 1887 || và năm 1887,
+  a young teacher named Anne Sullivan || một cô giáo trẻ tên là Anne Sullivan
+  arrived at their home. || đã đến nhà họ.
+
+Sullivan, who was partly blind herself, began to spell words into Helen's hand using her fingers.
+= Sullivan, người cũng bị mù một phần, bắt đầu dùng ngón tay đánh vần các từ vào lòng bàn tay Helen.
+  Sullivan, who was partly blind herself, || Sullivan, người cũng bị mù một phần,
+  began to spell words into Helen's hand || bắt đầu đánh vần các từ vào lòng bàn tay Helen
+  using her fingers. || bằng ngón tay của mình.
+
+At first, Helen copied the movements without understanding them.
+= Lúc đầu, Helen chỉ bắt chước các cử động mà không hiểu chúng.
+  At first, || Lúc đầu,
+  Helen copied the movements || Helen chỉ bắt chước các cử động
+  without understanding them. || mà không hiểu chúng.
+
+Then one day, Sullivan held one of Helen's hands under running water from a pump and spelled "w-a-t-e-r" into the other.
+= Rồi một hôm, Sullivan đặt một bàn tay của Helen dưới dòng nước chảy từ máy bơm và đánh vần "w-a-t-e-r" vào bàn tay còn lại.
+  Then one day, || Rồi một hôm,
+  Sullivan held one of Helen's hands || Sullivan đặt một bàn tay của Helen
+  under running water from a pump || dưới dòng nước chảy từ máy bơm
+  and spelled "w-a-t-e-r" into the other. || và đánh vần "w-a-t-e-r" vào bàn tay còn lại.
+
+Suddenly, Helen realised that the movements had a meaning: everything had a name.
+= Bỗng nhiên, Helen nhận ra rằng các cử động ấy có ý nghĩa: mọi vật đều có tên.
+  Suddenly, || Bỗng nhiên,
+  Helen realised that the movements had a meaning: || Helen nhận ra rằng các cử động ấy có ý nghĩa:
+  everything had a name. || mọi vật đều có tên.
+
+By the end of that day, she had learnt 30 new words.
+= Đến cuối ngày hôm đó, cô bé đã học được 30 từ mới.
+  By the end of that day, || Đến cuối ngày hôm đó,
+  she had learnt 30 new words. || cô bé đã học được 30 từ mới.
+
+After that, Helen's progress was amazing.
+= Sau đó, Helen tiến bộ một cách đáng kinh ngạc.
+  After that, || Sau đó,
+  Helen's progress was amazing. || Helen tiến bộ một cách đáng kinh ngạc.
+
+She learnt to read Braille, to write and even to speak, although her voice was not always easy to understand.
+= Bà học đọc chữ nổi Braille, học viết và thậm chí học nói, dù giọng nói của bà không phải lúc nào cũng dễ nghe.
+  She learnt to read Braille, || Bà học đọc chữ nổi Braille,
+  to write and even to speak, || học viết và thậm chí học nói,
+  although her voice was not always easy to understand. || dù giọng nói của bà không phải lúc nào cũng dễ nghe.
+
+With Sullivan beside her to spell out the lectures, she was accepted by Radcliffe College, a well-known college for women.
+= Với Sullivan ở bên cạnh để đánh vần lại các bài giảng, bà được nhận vào Cao đẳng Radcliffe, một trường nổi tiếng dành cho nữ giới.
+  With Sullivan beside her || Với Sullivan ở bên cạnh
+  to spell out the lectures, || để đánh vần lại các bài giảng,
+  she was accepted by Radcliffe College, || bà được nhận vào Cao đẳng Radcliffe,
+  a well-known college for women. || một trường nổi tiếng dành cho nữ giới.
+
+Studying there was very hard, and she often worked late into the night to keep up with the other students.
+= Việc học ở đó rất vất vả, và bà thường làm việc đến khuya để theo kịp các bạn.
+  Studying there was very hard, || Việc học ở đó rất vất vả,
+  and she often worked late into the night || và bà thường làm việc đến khuya
+  to keep up with the other students. || để theo kịp các bạn.
+
+In 1904, she graduated with honours and became the first deaf and blind person to earn a bachelor's degree.
+= Năm 1904, bà tốt nghiệp loại ưu và trở thành người vừa điếc vừa mù đầu tiên lấy được bằng cử nhân.
+  In 1904, || Năm 1904,
+  she graduated with honours || bà tốt nghiệp loại ưu
+  and became the first deaf and blind person || và trở thành người vừa điếc vừa mù đầu tiên
+  to earn a bachelor's degree. || lấy được bằng cử nhân.
+
+While she was still a student, she wrote her autobiography, The Story of My Life.
+= Khi còn là sinh viên, bà đã viết cuốn tự truyện "Câu chuyện đời tôi".
+  While she was still a student, || Khi còn là sinh viên,
+  she wrote her autobiography, The Story of My Life. || bà đã viết cuốn tự truyện "Câu chuyện đời tôi" (The Story of My Life).
+
+Helen spent the rest of her life helping others.
+= Helen dành phần đời còn lại để giúp đỡ người khác.
+  Helen spent the rest of her life || Helen dành phần đời còn lại
+  helping others. || để giúp đỡ người khác.
+
+She travelled to dozens of countries, gave speeches and raised money for people with disabilities.
+= Bà đến hàng chục quốc gia, diễn thuyết và quyên góp tiền cho người khuyết tật.
+  She travelled to dozens of countries, || Bà đến hàng chục quốc gia,
+  gave speeches || diễn thuyết
+  and raised money for people with disabilities. || và quyên góp tiền cho người khuyết tật.
+
+She also fought for women's right to vote and for better working conditions for the poor.
+= Bà còn đấu tranh cho quyền bầu cử của phụ nữ và cho điều kiện làm việc tốt hơn của người nghèo.
+  She also fought for women's right to vote || Bà còn đấu tranh cho quyền bầu cử của phụ nữ
+  and for better working conditions for the poor. || và cho điều kiện làm việc tốt hơn của người nghèo.
+
+Many people who had once felt sorry for her now looked to her for courage.
+= Nhiều người từng thương hại bà nay lại tìm thấy nghị lực từ chính bà.
+  Many people who had once felt sorry for her || Nhiều người từng thương hại bà
+  now looked to her for courage. || nay lại tìm thấy nghị lực từ chính bà.
+
+Helen Keller died in 1968, at the age of 87.
+= Helen Keller qua đời năm 1968, hưởng thọ 87 tuổi.
+  Helen Keller died in 1968, || Helen Keller qua đời năm 1968,
+  at the age of 87. || hưởng thọ 87 tuổi.
+
+Her friendship with Anne Sullivan lasted almost 50 years, until Sullivan's death in 1936.
+= Tình bạn giữa bà và Anne Sullivan kéo dài gần 50 năm, cho đến khi Sullivan qua đời năm 1936.
+  Her friendship with Anne Sullivan || Tình bạn giữa bà và Anne Sullivan
+  lasted almost 50 years, || kéo dài gần 50 năm,
+  until Sullivan's death in 1936. || cho đến khi Sullivan qua đời năm 1936.
+
+Today, her story is still taught in schools around the world.
+= Ngày nay, câu chuyện của bà vẫn được dạy trong các trường học trên khắp thế giới.
+  Today, || Ngày nay,
+  her story is still taught in schools around the world. || câu chuyện của bà vẫn được dạy trong các trường học trên khắp thế giới.
+
+It reminds us that, with patience and support, people can achieve things that once seemed impossible.
+= Câu chuyện ấy nhắc chúng ta rằng, với sự kiên nhẫn và được hỗ trợ, con người có thể làm được những điều từng tưởng như không thể.
+  It reminds us that, || Câu chuyện ấy nhắc chúng ta rằng,
+  with patience and support, || với sự kiên nhẫn và được hỗ trợ,
+  people can achieve things || con người có thể làm được những điều
+  that once seemed impossible. || từng tưởng như không thể.

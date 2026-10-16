@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Duyệt bản dịch · Vocabulary 12</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Literata:opsz,wght@7..72,500;7..72,600&display=swap">
+<link rel="stylesheet" href="css/app.css">
+<style>
+.wrap{padding-bottom:40px}
+.sent{display:grid;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:12px}
+.sent.ok{border-color:var(--good)}
+.sent .en{font-family:var(--f-word);font-size:16px}
+.ck{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px}
+.ck input{font-size:14px;padding:7px 9px}
+.ck .e{font-family:var(--f-word);padding:7px 0;color:var(--muted)}
+.bar2{position:sticky;top:0;z-index:5;background:var(--paper);padding:12px 0;border-bottom:1px solid var(--line);display:grid;gap:8px}
+@media (max-width:560px){.ck{grid-template-columns:1fr}.ck .e{padding:4px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar2">
+    <div class="row"><h2 style="font-size:19px" class="grow">Duyệt bản dịch Đọc bài</h2><a class="btn ghost sm" href="index.html">Về app</a></div>
+    <p class="small muted" style="margin:0">Bản dịch câu và cụm do Claude soạn. Thầy/cô sửa trực tiếp, tick “Đã duyệt” cho câu đạt. Xong bấm <b>Tải file nội dung</b> rồi tải file đó lên thư mục <code>content/</code> trên GitHub (ghi đè file cũ); đồng thời gửi file <b>bản dịch .txt</b> cho Claude để lưu vào công cụ.</p>
+    <div class="row"><select class="input" id="unitSel" style="max-width:320px"></select><span class="small muted grow" id="stat"></span></div>
+    <div class="row"><button class="btn" type="button" id="dlJson">Tải file nội dung (.json)</button><button class="btn soft" type="button" id="dlTxt">Tải file bản dịch (.txt)</button><label class="row small"><input type="checkbox" id="onlyTodo"> Chỉ hiện câu chưa duyệt</label></div>
+  </div>
+  <div id="list" class="sec"></div>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let D=null, CAT=null;
+const KEY=id=>'v12-duyet-'+id;
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.hidden=false;setTimeout(()=>t.hidden=true,2500)}
+async function init(){
+  CAT=await (await fetch('content/catalog.json',{cache:'no-cache'})).json();
+  const sel=document.getElementById('unitSel');
+  sel.innerHTML=CAT.parts.flatMap(p=>p.units.filter(u=>u.ready).map(u=>`<option value="${u.id}">Part ${p.part} · Unit ${u.unit} · ${esc(u.title)}</option>`)).join('');
+  sel.onchange=()=>load(sel.value); load(sel.value);
+  document.getElementById('onlyTodo').onchange=render;
+  document.getElementById('dlJson').onclick=()=>download(D.id+'.json',JSON.stringify(D),'application/json');
+  document.getElementById('dlTxt').onclick=()=>download(D.id+'.txt',toTxt(),'text/plain');
+}
+async function load(id){
+  D=await (await fetch('content/'+id+'.json',{cache:'no-cache'})).json();
+  try{const saved=JSON.parse(localStorage.getItem(KEY(id))||'null');if(saved&&saved.hash===D.contentHash)applySaved(saved.edits)}catch(e){}
+  render();
+}
+function each(fn){D.texts.forEach((t,ti)=>t.paras.forEach((p,pi)=>p.forEach((s,si)=>fn(s,t,`${ti}.${pi}.${si}`))))}
+function applySaved(ed){each((s,t,k)=>{if(ed[k]){Object.assign(s,ed[k])}})}
+function persist(){const ed={};each((s,t,k)=>{ed[k]={vi:s.vi,chunks:s.chunks,by:s.by}});try{localStorage.setItem(KEY(D.id),JSON.stringify({hash:D.contentHash,edits:ed}))}catch(e){}stat()}
+function stat(){let n=0,ok=0;each(s=>{n++;if(s.by==='gv')ok++});document.getElementById('stat').textContent=`Đã duyệt ${ok}/${n} câu`}
+function render(){
+  const only=document.getElementById('onlyTodo').checked;
+  let h='';
+  D.texts.forEach((t,ti)=>{
+    h+=`<h3 style="font-size:16px;margin-top:8px">${esc(t.label)} · ${esc(t.title)}</h3>`;
+    t.paras.forEach((p,pi)=>p.forEach((s,si)=>{
+      const k=`${ti}.${pi}.${si}`; if(only&&s.by==='gv')return;
+      const ch=(s.chunks&&s.chunks.length?s.chunks:[[s.en,s.vi||'']]);
+      h+=`<div class="sent ${s.by==='gv'?'ok':''}" data-k="${k}">
+        <div class="row"><span class="label">Đoạn ${pi+1} · câu ${si+1}</span><span class="grow"></span><label class="row small"><input type="checkbox" data-ok ${s.by==='gv'?'checked':''}> Đã duyệt</label></div>
+        <div class="en">${esc(s.en)}</div>
+        <textarea class="input" data-vi style="min-height:60px">${esc(s.vi||'')}</textarea>
+        <details ${ch.length>1?'':'hidden'}><summary class="small" style="cursor:pointer;color:var(--accent)">Nghĩa từng cụm (${ch.length})</summary>
+          <div style="display:grid;gap:6px;margin-top:6px">${ch.map((c,ci)=>`<div class="ck"><div class="e">${esc(c[0])}</div><input class="input" data-ck="${ci}" value="${esc(c[1])}"></div>`).join('')}</div></details>
+      </div>`;
+    }));
+  });
+  const L=document.getElementById('list');L.innerHTML=h;stat();
+  L.querySelectorAll('.sent').forEach(box=>{
+    const [ti,pi,si]=box.dataset.k.split('.').map(Number); const s=D.texts[ti].paras[pi][si];
+    if(!s.chunks||!s.chunks.length)s.chunks=[[s.en,s.vi||'']];
+    box.querySelector('[data-vi]').oninput=e=>{s.vi=e.target.value;if(s.chunks.length===1)s.chunks[0][1]=s.vi;persist()};
+    box.querySelectorAll('[data-ck]').forEach(inp=>inp.oninput=()=>{s.chunks[+inp.dataset.ck][1]=inp.value;persist()});
+    box.querySelector('[data-ok]').onchange=e=>{s.by=e.target.checked?'gv':'claude';box.classList.toggle('ok',e.target.checked);persist()};
+  });
+}
+function toTxt(){
+  let out=`# ${D.id} — bản dịch Đọc bài (xuất từ trang duyệt ${new Date().toLocaleDateString('vi-VN')})\n`;
+  D.texts.forEach(t=>{out+=`\n# ---------- ${t.label} ----------\n`;t.paras.forEach(p=>p.forEach(s=>{
+    out+=`${s.en}\n= ${s.vi||''}\n`; if(s.by==='gv')out+='@by gv\n';
+    const ch=s.chunks||[]; if(ch.length>1)ch.forEach(c=>out+=`  ${c[0]} || ${c[1]}\n`); out+='\n';
+  }))});
+  return out;
+}
+function download(name,text,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500);toast('Đã tải '+name)}
+init().catch(e=>{document.getElementById('list').innerHTML='<div class="notice">Không tải được dữ liệu: '+esc(e.message)+'</div>'});
+</script>
+</body>
+</html>

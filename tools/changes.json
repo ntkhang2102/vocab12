@@ -1,0 +1,13 @@
+{
+  "app": {"version": "0.1.0"},
+  "changes": [
+    {"version": "0.1.0", "date": "16/10/2026", "items": [
+      "Bản thí điểm đầu tiên: Unit 1 đủ 3 Part (A2–B1, B1–B2, B2–C1).",
+      "Bài tập trong sách đầy đủ: Reflex Quiz, Reading 1–6, có chế độ Luyện tập và Thi thử.",
+      "Kiểm tra từ vựng ngẫu nhiên nhiều Unit, có tính giờ và chấm điểm.",
+      "Nút Hỏi AI: chép câu hỏi và mở Claude / ChatGPT / Gemini.",
+      "Sao lưu và khôi phục tiến độ học."
+    ]}
+  ],
+  "units": {}
+}

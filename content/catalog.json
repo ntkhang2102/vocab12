@@ -1,0 +1,311 @@
+{
+ "app": "0.1.0",
+ "defaultUnit": "p1-u01",
+ "built": "2026.10.16",
+ "parts": [
+  {
+   "part": 1,
+   "level": "A2–B1",
+   "name": "Pre-Intermediate",
+   "units": [
+    {
+     "id": "p1-u01",
+     "unit": 1,
+     "title": "Life Stories We Admire",
+     "ready": true,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-400b",
+     "hash": "400b39be1c"
+    },
+    {
+     "id": "p1-u02",
+     "unit": 2,
+     "title": "A Multicultural World",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-83be",
+     "hash": "83bec0fe47"
+    },
+    {
+     "id": "p1-u03",
+     "unit": 3,
+     "title": "Green Living",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-74fc",
+     "hash": "74fc0e3928"
+    },
+    {
+     "id": "p1-u04",
+     "unit": 4,
+     "title": "Urbanisation",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-48d6",
+     "hash": "48d68d826f"
+    },
+    {
+     "id": "p1-u05",
+     "unit": 5,
+     "title": "The World of Work",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-ffa5",
+     "hash": "ffa50d822c"
+    },
+    {
+     "id": "p1-u06",
+     "unit": 6,
+     "title": "Technology",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-9281",
+     "hash": "92814b7680"
+    },
+    {
+     "id": "p1-u07",
+     "unit": 7,
+     "title": "The World of Mass Media",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-5676",
+     "hash": "5676846b68"
+    },
+    {
+     "id": "p1-u08",
+     "unit": 8,
+     "title": "Wildlife Conservation",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-9ecb",
+     "hash": "9ecb17c6ad"
+    },
+    {
+     "id": "p1-u09",
+     "unit": 9,
+     "title": "Career Paths",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-ce9e",
+     "hash": "ce9e98c8c0"
+    },
+    {
+     "id": "p1-u10",
+     "unit": 10,
+     "title": "Lifelong Learning",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-865a",
+     "hash": "865a162acb"
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "level": "B1–B2",
+   "name": "Intermediate",
+   "units": [
+    {
+     "id": "p2-u01",
+     "unit": 1,
+     "title": "Life Stories We Admire",
+     "ready": true,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-f4f2",
+     "hash": "f4f2caeb6e"
+    },
+    {
+     "id": "p2-u02",
+     "unit": 2,
+     "title": "A Multicultural World",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-463d",
+     "hash": "463dd56c5d"
+    },
+    {
+     "id": "p2-u03",
+     "unit": 3,
+     "title": "Green Living",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-726b",
+     "hash": "726b8da228"
+    },
+    {
+     "id": "p2-u04",
+     "unit": 4,
+     "title": "Urbanisation",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-ba55",
+     "hash": "ba55d3f565"
+    },
+    {
+     "id": "p2-u05",
+     "unit": 5,
+     "title": "The World of Work",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-e922",
+     "hash": "e922648fd8"
+    },
+    {
+     "id": "p2-u06",
+     "unit": 6,
+     "title": "Technology",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-41e1",
+     "hash": "41e18f5da5"
+    },
+    {
+     "id": "p2-u07",
+     "unit": 7,
+     "title": "The World of Mass Media",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-eee3",
+     "hash": "eee3fd2222"
+    },
+    {
+     "id": "p2-u08",
+     "unit": 8,
+     "title": "Wildlife Conservation",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-ab72",
+     "hash": "ab722e1251"
+    },
+    {
+     "id": "p2-u09",
+     "unit": 9,
+     "title": "Career Paths",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-a3de",
+     "hash": "a3de512abb"
+    },
+    {
+     "id": "p2-u10",
+     "unit": 10,
+     "title": "Lifelong Learning",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-b7a2",
+     "hash": "b7a25e844e"
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "level": "B2–C1",
+   "name": "Upper-Intermediate",
+   "units": [
+    {
+     "id": "p3-u01",
+     "unit": 1,
+     "title": "Life Stories We Admire",
+     "ready": true,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-51d1",
+     "hash": "51d1365097"
+    },
+    {
+     "id": "p3-u02",
+     "unit": 2,
+     "title": "A Multicultural World",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-30d3",
+     "hash": "30d33cf967"
+    },
+    {
+     "id": "p3-u03",
+     "unit": 3,
+     "title": "Green Living",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-0e02",
+     "hash": "0e023fcf96"
+    },
+    {
+     "id": "p3-u04",
+     "unit": 4,
+     "title": "Urbanisation",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-eb4a",
+     "hash": "eb4a868d32"
+    },
+    {
+     "id": "p3-u05",
+     "unit": 5,
+     "title": "The World of Work",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-a994",
+     "hash": "a9947f9dca"
+    },
+    {
+     "id": "p3-u06",
+     "unit": 6,
+     "title": "Technology",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-0989",
+     "hash": "098997e99e"
+    },
+    {
+     "id": "p3-u07",
+     "unit": 7,
+     "title": "The World of Mass Media",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-2850",
+     "hash": "285029e6ca"
+    },
+    {
+     "id": "p3-u08",
+     "unit": 8,
+     "title": "Wildlife Conservation",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-64ac",
+     "hash": "64ac456dcd"
+    },
+    {
+     "id": "p3-u09",
+     "unit": 9,
+     "title": "Career Paths",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-48c2",
+     "hash": "48c25538b7"
+    },
+    {
+     "id": "p3-u10",
+     "unit": 10,
+     "title": "Lifelong Learning",
+     "ready": false,
+     "vocabCount": 60,
+     "contentVersion": "2026.10.16-5a90",
+     "hash": "5a90a8df91"
+    }
+   ]
+  }
+ ],
+ "changes": [
+  {
+   "version": "0.1.0",
+   "date": "16/10/2026",
+   "items": [
+    "Bản thí điểm đầu tiên: Unit 1 đủ 3 Part (A2–B1, B1–B2, B2–C1).",
+    "Bài tập trong sách đầy đủ: Reflex Quiz, Reading 1–6, có chế độ Luyện tập và Thi thử.",
+    "Kiểm tra từ vựng ngẫu nhiên nhiều Unit, có tính giờ và chấm điểm.",
+    "Nút Hỏi AI: chép câu hỏi và mở Claude / ChatGPT / Gemini.",
+    "Sao lưu và khôi phục tiến độ học."
+   ]
+  }
+ ]
+}

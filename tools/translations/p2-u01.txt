@@ -1,0 +1,448 @@
+# Unit 1 · Part 2 — Bản dịch câu/cụm cho mục Đọc bài
+# Lấy từ bản demo vocab12-unit1-demo.html (Claude soạn) — CHỜ GIÁO VIÊN DUYỆT.
+# Khi duyệt xong câu nào, thêm dòng "@by gv" vào khối của câu đó.
+
+# ---------- Reading 1 ----------
+Every Saturday this autumn, the City Library invites you to meet people whose stories prove that ordinary people can do extraordinary things.
+= Mỗi thứ Bảy trong mùa thu này, Thư viện Thành phố mời bạn đến gặp gỡ những người có câu chuyện chứng minh rằng người bình thường có thể làm nên những điều phi thường.
+  Every Saturday this autumn, || Mỗi thứ Bảy trong mùa thu này,
+  the City Library invites you || Thư viện Thành phố mời bạn
+  to meet people || đến gặp gỡ những người
+  whose stories prove || có câu chuyện chứng minh
+  that ordinary people can do extraordinary things. || rằng người bình thường có thể làm nên những điều phi thường.
+
+Our first guest, a former street child, went on to set up a free school for 300 children.
+= Vị khách đầu tiên của chúng tôi, từng là một trẻ em đường phố, sau đó đã thành lập một ngôi trường miễn phí cho 300 trẻ em.
+  Our first guest, || Vị khách đầu tiên của chúng tôi,
+  a former street child, || từng là một trẻ em đường phố,
+  went on to set up || sau đó đã thành lập
+  a free school for 300 children. || một ngôi trường miễn phí cho 300 trẻ em.
+
+Our second guest lost her sight at the age of 20 but refused to let it hold her back; she is now a successful lawyer.
+= Vị khách thứ hai bị mất thị lực năm 20 tuổi nhưng không để điều đó cản bước mình; giờ đây cô là một luật sư thành đạt.
+  Our second guest || Vị khách thứ hai
+  lost her sight at the age of 20 || bị mất thị lực năm 20 tuổi
+  but refused to let it hold her back; || nhưng không để điều đó cản bước mình;
+  she is now a successful lawyer. || giờ đây cô là một luật sư thành đạt.
+
+Each talk lasts about an hour and is followed by a question-and-answer session.
+= Mỗi buổi nói chuyện kéo dài khoảng một giờ, tiếp theo là một phần hỏi đáp.
+  Each talk lasts about an hour || Mỗi buổi nói chuyện kéo dài khoảng một giờ
+  and is followed by || và tiếp theo là
+  a question-and-answer session. || một phần hỏi đáp.
+
+Seats are limited, so we strongly recommend booking online.
+= Số ghế có hạn, vì vậy chúng tôi đặc biệt khuyên bạn đặt chỗ trực tuyến.
+  Seats are limited, || Số ghế có hạn,
+  so we strongly recommend || vì vậy chúng tôi đặc biệt khuyên bạn
+  booking online. || đặt chỗ trực tuyến.
+
+Don't miss this chance to hear stories that will make you think about your own life!
+= Đừng bỏ lỡ cơ hội nghe những câu chuyện sẽ khiến bạn suy ngẫm về cuộc đời của chính mình!
+  Don't miss this chance || Đừng bỏ lỡ cơ hội này
+  to hear stories || để nghe những câu chuyện
+  that will make you think || sẽ khiến bạn suy ngẫm
+  about your own life! || về cuộc đời của chính mình!
+
+# ---------- Reading 2 ----------
+Do you know someone who quietly makes your neighbourhood a better place?
+= Bạn có biết ai đó lặng lẽ làm cho khu phố của bạn tốt đẹp hơn không?
+  Do you know someone || Bạn có biết ai đó
+  who quietly makes your neighbourhood || lặng lẽ làm cho khu phố của bạn
+  a better place? || trở thành một nơi tốt đẹp hơn không?
+
+Nominations for this year's Local Hero Awards are open until 1 December.
+= Việc đề cử cho Giải thưởng Người hùng địa phương năm nay được mở đến ngày 1 tháng 12.
+  Nominations for this year's Local Hero Awards || Việc đề cử cho Giải thưởng Người hùng địa phương năm nay
+  are open until 1 December. || được mở đến ngày 1 tháng 12.
+
+Who can be nominated: anyone over 16 who has made a real difference to others, regardless of their age, job or background.
+= Ai có thể được đề cử: bất kỳ ai trên 16 tuổi đã tạo ra sự thay đổi thật sự cho người khác, bất kể tuổi tác, nghề nghiệp hay xuất thân.
+  Who can be nominated: || Ai có thể được đề cử:
+  anyone over 16 || bất kỳ ai trên 16 tuổi
+  who has made a real difference to others, || đã tạo ra sự thay đổi thật sự cho người khác,
+  regardless of their age, job or background. || bất kể tuổi tác, nghề nghiệp hay xuất thân.
+
+How to nominate: fill in the online form and explain in no more than 300 words what the person has done and why they deserve the award.
+= Cách đề cử: điền vào mẫu đơn trực tuyến và giải thích trong không quá 300 từ người đó đã làm gì và vì sao họ xứng đáng nhận giải.
+  How to nominate: || Cách đề cử:
+  fill in the online form || điền vào mẫu đơn trực tuyến
+  and explain in no more than 300 words || và giải thích trong không quá 300 từ
+  what the person has done || người đó đã làm gì
+  and why they deserve the award. || và vì sao họ xứng đáng nhận giải.
+
+What happens next: a panel of judges will draw up a shortlist of ten candidates in January.
+= Điều gì diễn ra tiếp theo: một hội đồng giám khảo sẽ lập danh sách rút gọn gồm mười ứng viên vào tháng Một.
+  What happens next: || Điều gì diễn ra tiếp theo:
+  a panel of judges || một hội đồng giám khảo
+  will draw up a shortlist || sẽ lập ra một danh sách rút gọn
+  of ten candidates in January. || gồm mười ứng viên vào tháng Một.
+
+The prize: each winner will receive a certificate and 10 million VND to put towards a community project of their choice.
+= Giải thưởng: mỗi người đoạt giải sẽ nhận một giấy chứng nhận và 10 triệu đồng để đóng góp vào một dự án cộng đồng do họ tự chọn.
+  The prize: || Giải thưởng:
+  each winner will receive || mỗi người đoạt giải sẽ nhận được
+  a certificate and 10 million VND || một giấy chứng nhận và 10 triệu đồng
+  to put towards a community project || để đóng góp vào một dự án cộng đồng
+  of their choice. || do họ tự chọn.
+
+Help us shine a light on the everyday heroes whom we too often take for granted.
+= Hãy giúp chúng tôi tôn vinh những người hùng thường ngày mà chúng ta quá thường xuyên coi là điều hiển nhiên.
+  Help us shine a light on || Hãy giúp chúng tôi tôn vinh
+  the everyday heroes || những người hùng thường ngày
+  whom we too often take for granted. || mà chúng ta quá thường xuyên coi là điều hiển nhiên.
+
+# ---------- Reading 4 ----------
+Jane Goodall, the British scientist who changed the way we understand chimpanzees, died on 1 October 2025 at the age of 91.
+= Jane Goodall, nhà khoa học người Anh đã thay đổi cách chúng ta hiểu về loài tinh tinh, qua đời ngày 1 tháng 10 năm 2025 ở tuổi 91.
+  Jane Goodall, || Jane Goodall,
+  the British scientist || nhà khoa học người Anh
+  who changed the way || người đã thay đổi cách
+  we understand chimpanzees, || chúng ta hiểu về loài tinh tinh,
+  died on 1 October 2025 || qua đời ngày 1 tháng 10 năm 2025
+  at the age of 91. || ở tuổi 91.
+
+She was on a speaking tour in California at the time, and the Jane Goodall Institute said that she had died of natural causes.
+= Khi ấy bà đang trong chuyến đi diễn thuyết ở California, và Viện Jane Goodall cho biết bà qua đời vì nguyên nhân tự nhiên.
+  She was on a speaking tour || Khi ấy bà đang trong một chuyến đi diễn thuyết
+  in California at the time, || ở California,
+  and the Jane Goodall Institute said || và Viện Jane Goodall cho biết
+  that she had died of natural causes. || bà qua đời vì nguyên nhân tự nhiên.
+
+At an event in Pasadena that she had planned to attend, the audience stood in silence before watching a recorded video of her talking about the power of young people to change the world.
+= Tại một sự kiện ở Pasadena mà bà đã dự định tham dự, khán giả đứng lặng im trước khi xem đoạn video ghi hình bà nói về sức mạnh của người trẻ trong việc thay đổi thế giới.
+  At an event in Pasadena || Tại một sự kiện ở Pasadena
+  that she had planned to attend, || mà bà đã dự định tham dự,
+  the audience stood in silence || khán giả đứng lặng im
+  before watching a recorded video of her || trước khi xem một đoạn video ghi hình bà
+  talking about the power of young people || nói về sức mạnh của người trẻ
+  to change the world. || trong việc thay đổi thế giới.
+
+Born in London in 1934, Goodall spent hours as a child sitting in a tree with library books, dreaming of Africa.
+= Sinh ra ở London năm 1934, thuở nhỏ Goodall dành hàng giờ ngồi trên cây với sách mượn thư viện, mơ về châu Phi.
+  Born in London in 1934, || Sinh ra ở London năm 1934,
+  Goodall spent hours as a child || thuở nhỏ Goodall dành hàng giờ
+  sitting in a tree with library books, || ngồi trên cây với những cuốn sách mượn thư viện,
+  dreaming of Africa. || mơ về châu Phi.
+
+At a time when girls were not expected to become scientists, she had no plan to study science.
+= Vào thời mà con gái không được kỳ vọng trở thành nhà khoa học, bà không hề có kế hoạch học khoa học.
+  At a time when girls || Vào thời mà các cô gái
+  were not expected to become scientists, || không được kỳ vọng trở thành nhà khoa học,
+  she had no plan to study science. || bà không hề có kế hoạch học khoa học.
+
+After travelling to Africa as a young woman, she met the famous fossil expert Louis Leakey in Kenya and began working as his secretary.
+= Sau khi đến châu Phi khi còn là một thiếu nữ, bà gặp chuyên gia hóa thạch nổi tiếng Louis Leakey ở Kenya và bắt đầu làm thư ký cho ông.
+  After travelling to Africa || Sau khi đến châu Phi
+  as a young woman, || khi còn là một thiếu nữ,
+  she met the famous fossil expert || bà gặp chuyên gia hóa thạch nổi tiếng
+  Louis Leakey in Kenya || Louis Leakey ở Kenya
+  and began working as his secretary. || và bắt đầu làm thư ký cho ông.
+
+Leakey soon paid for her to spend six months studying chimpanzees in Gombe, Tanzania.
+= Không lâu sau, Leakey tài trợ để bà dành sáu tháng nghiên cứu tinh tinh ở Gombe, Tanzania.
+  Leakey soon paid for her || Leakey sớm chi tiền cho bà
+  to spend six months || để dành sáu tháng
+  studying chimpanzees in Gombe, Tanzania. || nghiên cứu tinh tinh ở Gombe, Tanzania.
+
+Working alone at the age of 26, Goodall observed something that shocked the scientific world.
+= Làm việc một mình ở tuổi 26, Goodall quan sát thấy một điều khiến giới khoa học sửng sốt.
+  Working alone at the age of 26, || Làm việc một mình ở tuổi 26,
+  Goodall observed something || Goodall đã quan sát thấy một điều
+  that shocked the scientific world. || khiến giới khoa học sửng sốt.
+
+Until then, scientists had believed that only humans were able to make and use tools.
+= Cho đến lúc đó, các nhà khoa học vẫn tin rằng chỉ con người mới có khả năng chế tạo và sử dụng công cụ.
+  Until then, || Cho đến lúc đó,
+  scientists had believed || các nhà khoa học vẫn tin
+  that only humans were able || rằng chỉ con người mới có khả năng
+  to make and use tools. || chế tạo và sử dụng công cụ.
+
+But Goodall saw chimpanzees using twigs to fish for termites.
+= Nhưng Goodall đã thấy tinh tinh dùng cành cây nhỏ để câu mối.
+  But Goodall saw chimpanzees || Nhưng Goodall đã thấy tinh tinh
+  using twigs || dùng những cành cây nhỏ
+  to fish for termites. || để câu mối.
+
+Leakey declared that humans would now have to redefine "tool" and "man".
+= Leakey tuyên bố rằng giờ đây loài người sẽ phải định nghĩa lại "công cụ" và "con người".
+  Leakey declared || Leakey tuyên bố
+  that humans would now have to redefine || rằng giờ đây loài người sẽ phải định nghĩa lại
+  "tool" and "man". || "công cụ" và "con người".
+
+Films made by the wildlife photographer Hugo van Lawick, whom she later married, helped to convince people that her findings were true.
+= Những thước phim do nhà nhiếp ảnh động vật hoang dã Hugo van Lawick, người sau này trở thành chồng bà, thực hiện đã giúp thuyết phục mọi người rằng phát hiện của bà là thật.
+  Films made by || Những thước phim do
+  the wildlife photographer Hugo van Lawick, || nhà nhiếp ảnh động vật hoang dã Hugo van Lawick thực hiện,
+  whom she later married, || người mà sau này bà kết hôn,
+  helped to convince people || đã giúp thuyết phục mọi người
+  that her findings were true. || rằng những phát hiện của bà là thật.
+
+In 1977, Goodall founded the Jane Goodall Institute, which still carries out research at Gombe and protects chimpanzees and their habitats around the world.
+= Năm 1977, Goodall thành lập Viện Jane Goodall, nơi vẫn tiến hành nghiên cứu ở Gombe và bảo vệ tinh tinh cùng môi trường sống của chúng trên khắp thế giới.
+  In 1977, || Năm 1977,
+  Goodall founded the Jane Goodall Institute, || Goodall thành lập Viện Jane Goodall,
+  which still carries out research at Gombe || nơi vẫn tiến hành nghiên cứu ở Gombe
+  and protects chimpanzees and their habitats || và bảo vệ tinh tinh cùng môi trường sống của chúng
+  around the world. || trên khắp thế giới.
+
+Its youth programme, Roots & Shoots, now runs in more than 60 countries.
+= Chương trình thanh thiếu niên của viện, Roots & Shoots, hiện hoạt động ở hơn 60 quốc gia.
+  Its youth programme, Roots & Shoots, || Chương trình thanh thiếu niên của viện, Roots & Shoots,
+  now runs in more than 60 countries. || hiện hoạt động ở hơn 60 quốc gia.
+
+For the last four decades of her life, she travelled widely, speaking about climate change and the threats facing chimpanzees.
+= Trong bốn thập kỷ cuối đời, bà đi khắp nơi, nói về biến đổi khí hậu và những mối đe dọa mà loài tinh tinh đang đối mặt.
+  For the last four decades of her life, || Trong bốn thập kỷ cuối đời,
+  she travelled widely, || bà đi khắp nơi,
+  speaking about climate change || nói về biến đổi khí hậu
+  and the threats facing chimpanzees. || và những mối đe dọa mà loài tinh tinh đang đối mặt.
+
+As she once told CBS News, when we harm nature, we harm ourselves.
+= Như có lần bà nói với CBS News, khi chúng ta làm hại thiên nhiên, chúng ta làm hại chính mình.
+  As she once told CBS News, || Như có lần bà nói với CBS News,
+  when we harm nature, || khi chúng ta làm hại thiên nhiên,
+  we harm ourselves. || chúng ta làm hại chính mình.
+
+# ---------- Reading 5 ----------
+Nguyen Dinh Nhan was born without arms in Nghi Kim Commune, Nghe An Province.
+= Nguyễn Đình Nhân sinh ra đã không có hai tay, ở xã Nghi Kim, tỉnh Nghệ An.
+  Nguyen Dinh Nhan || Nguyễn Đình Nhân
+  was born without arms || sinh ra đã không có hai tay
+  in Nghi Kim Commune, Nghe An Province. || ở xã Nghi Kim, tỉnh Nghệ An.
+
+He is the fifth of six children in a poor family, and when he was only three, his father was killed in a traffic accident.
+= Em là con thứ năm trong sáu người con của một gia đình nghèo, và khi em mới ba tuổi, cha em thiệt mạng trong một vụ tai nạn giao thông.
+  He is the fifth of six children || Em là con thứ năm trong sáu người con
+  in a poor family, || của một gia đình nghèo,
+  and when he was only three, || và khi em mới ba tuổi,
+  his father was killed || cha em đã thiệt mạng
+  in a traffic accident. || trong một vụ tai nạn giao thông.
+
+From then on, his mother, Nguyen Thi Vinh, had to raise all six children on her own.
+= Từ đó, mẹ em là bà Nguyễn Thị Vinh phải một mình nuôi cả sáu người con.
+  From then on, || Từ đó trở đi,
+  his mother, Nguyen Thi Vinh, || mẹ em, bà Nguyễn Thị Vinh,
+  had to raise all six children || phải nuôi cả sáu người con
+  on her own. || một mình.
+
+Few people in the village expected the armless boy to have much of a future.
+= Ít ai trong làng nghĩ rằng cậu bé không tay lại có một tương lai đáng kể.
+  Few people in the village expected || Ít ai trong làng nghĩ rằng
+  the armless boy || cậu bé không tay
+  to have much of a future. || sẽ có một tương lai đáng kể.
+
+Nhan, however, refused to accept that his disability would decide his life.
+= Tuy nhiên, Nhân không chịu chấp nhận để khuyết tật quyết định cuộc đời mình.
+  Nhan, however, || Tuy nhiên, Nhân
+  refused to accept || không chịu chấp nhận
+  that his disability would decide his life. || rằng khuyết tật sẽ quyết định cuộc đời mình.
+
+He taught himself to write by holding a pen between his toes.
+= Em tự học viết bằng cách kẹp bút giữa các ngón chân.
+  He taught himself to write || Em tự học viết
+  by holding a pen between his toes. || bằng cách kẹp bút giữa các ngón chân.
+
+Little by little, he also learnt to brush his teeth, wash his face and eat with a spoon using only his feet.
+= Dần dần, em cũng học được cách đánh răng, rửa mặt và ăn bằng thìa chỉ bằng đôi chân.
+  Little by little, || Dần dần,
+  he also learnt to brush his teeth, || em cũng học được cách đánh răng,
+  wash his face || rửa mặt
+  and eat with a spoon || và ăn bằng thìa
+  using only his feet. || chỉ bằng đôi chân.
+
+He even helped at home by sweeping the floor, cooking and feeding the animals, while friends took turns helping him get to school.
+= Em còn phụ giúp việc nhà như quét nhà, nấu ăn và cho gia súc ăn, trong khi bạn bè thay phiên nhau đưa em đến trường.
+  He even helped at home || Em thậm chí còn phụ giúp việc nhà
+  by sweeping the floor, || bằng cách quét nhà,
+  cooking and feeding the animals, || nấu ăn và cho gia súc ăn,
+  while friends took turns || trong khi bạn bè thay phiên nhau
+  helping him get to school. || giúp em đến trường.
+
+His hard work paid off.
+= Sự chăm chỉ của em đã được đền đáp.
+
+Nhan was an excellent student for twelve years in a row, and as he approached 18, he set his heart on a degree in information technology.
+= Nhân là học sinh giỏi suốt mười hai năm liền, và khi gần 18 tuổi, em quyết tâm theo đuổi tấm bằng ngành công nghệ thông tin.
+  Nhan was an excellent student || Nhân là học sinh giỏi
+  for twelve years in a row, || suốt mười hai năm liền,
+  and as he approached 18, || và khi gần 18 tuổi,
+  he set his heart on || em quyết tâm theo đuổi
+  a degree in information technology. || tấm bằng ngành công nghệ thông tin.
+
+He was inspired by Nguyen Cong Hung, a well-known local figure nicknamed the "IT Knight", and decided to follow a similar path.
+= Em được truyền cảm hứng từ anh Nguyễn Công Hùng, một nhân vật nổi tiếng ở địa phương có biệt danh "Hiệp sĩ CNTT", và quyết định đi theo con đường tương tự.
+  He was inspired by Nguyen Cong Hung, || Em được truyền cảm hứng từ anh Nguyễn Công Hùng,
+  a well-known local figure || một nhân vật nổi tiếng ở địa phương
+  nicknamed the "IT Knight", || có biệt danh "Hiệp sĩ công nghệ thông tin",
+  and decided to follow a similar path. || và quyết định đi theo con đường tương tự.
+
+In 2016, he was accepted into the Industrial University of Vinh and received a scholarship from Tuoi Tre newspaper, which covered his admission fees and eased the burden on his mother.
+= Năm 2016, em trúng tuyển vào Trường Đại học Công nghiệp Vinh và nhận học bổng của báo Tuổi Trẻ, giúp trả phí nhập học và làm nhẹ gánh nặng cho mẹ.
+  In 2016, || Năm 2016,
+  he was accepted into the Industrial University of Vinh || em trúng tuyển vào Trường Đại học Công nghiệp Vinh
+  and received a scholarship from Tuoi Tre newspaper, || và nhận học bổng của báo Tuổi Trẻ,
+  which covered his admission fees || khoản học bổng chi trả phí nhập học
+  and eased the burden on his mother. || và làm nhẹ gánh nặng cho mẹ em.
+
+Four years later, Nhan graduated with good grades.
+= Bốn năm sau, Nhân tốt nghiệp với kết quả tốt.
+  Four years later, || Bốn năm sau,
+  Nhan graduated with good grades. || Nhân tốt nghiệp loại khá.
+
+Today he works in graphic design and digital content for a local company that produces videos for YouTube, Facebook and TikTok, controlling his keyboard and mouse with his feet.
+= Hiện nay anh làm thiết kế đồ họa và nội dung số cho một công ty địa phương sản xuất video cho YouTube, Facebook và TikTok, điều khiển bàn phím và chuột bằng chân.
+  Today he works || Hiện nay anh làm việc
+  in graphic design and digital content || về thiết kế đồ họa và nội dung số
+  for a local company || cho một công ty địa phương
+  that produces videos || chuyên sản xuất video
+  for YouTube, Facebook and TikTok, || cho YouTube, Facebook và TikTok,
+  controlling his keyboard and mouse || điều khiển bàn phím và chuột
+  with his feet. || bằng đôi chân.
+
+He earns about six to seven million dong a month, enough to support himself and help his mother.
+= Anh kiếm khoảng sáu đến bảy triệu đồng mỗi tháng, đủ tự nuôi bản thân và phụ giúp mẹ.
+  He earns about six to seven million dong a month, || Anh kiếm được khoảng sáu đến bảy triệu đồng mỗi tháng,
+  enough to support himself || đủ để tự nuôi bản thân
+  and help his mother. || và phụ giúp mẹ.
+
+Looking back, he describes the scholarship as a huge source of motivation, and he hopes that today's young scholarship winners will one day help others, just as he was helped.
+= Nhìn lại, anh coi học bổng là một nguồn động lực to lớn và hy vọng những bạn trẻ nhận học bổng hôm nay một ngày nào đó sẽ giúp đỡ người khác, như anh từng được giúp đỡ.
+  Looking back, || Nhìn lại,
+  he describes the scholarship || anh mô tả học bổng
+  as a huge source of motivation, || như một nguồn động lực to lớn,
+  and he hopes that || và anh hy vọng rằng
+  today's young scholarship winners || những bạn trẻ nhận học bổng hôm nay
+  will one day help others, || một ngày nào đó sẽ giúp đỡ người khác,
+  just as he was helped. || giống như anh đã từng được giúp đỡ.
+
+# ---------- Reading 6 ----------
+Katherine Johnson, the NASA mathematician whose calculations helped send the first Americans into space, died in February 2020 at the age of 101.
+= Katherine Johnson, nhà toán học NASA có những phép tính đã giúp đưa những người Mỹ đầu tiên lên vũ trụ, qua đời vào tháng 2 năm 2020 ở tuổi 101.
+  Katherine Johnson, || Katherine Johnson,
+  the NASA mathematician || nhà toán học của NASA
+  whose calculations helped send || người có những phép tính đã giúp đưa
+  the first Americans into space, || những người Mỹ đầu tiên lên vũ trụ,
+  died in February 2020 || qua đời vào tháng 2 năm 2020
+  at the age of 101. || ở tuổi 101.
+
+NASA's head at the time said that the agency would never forget her courage, adding that some of its greatest milestones would not have been possible without her.
+= Người đứng đầu NASA khi đó nói rằng cơ quan này sẽ không bao giờ quên lòng dũng cảm của bà, và thêm rằng một số cột mốc vĩ đại nhất của NASA đã không thể thành hiện thực nếu thiếu bà.
+  NASA's head at the time said || Người đứng đầu NASA khi đó nói
+  that the agency would never forget her courage, || rằng cơ quan này sẽ không bao giờ quên lòng dũng cảm của bà,
+  adding that some of its greatest milestones || và nói thêm rằng một số cột mốc vĩ đại nhất của NASA
+  would not have been possible without her. || đã không thể đạt được nếu không có bà.
+
+For most of her life, however, few people outside NASA knew her name.
+= Tuy nhiên, trong phần lớn cuộc đời bà, rất ít người ngoài NASA biết tên bà.
+  For most of her life, however, || Tuy nhiên, trong phần lớn cuộc đời bà,
+  few people outside NASA knew her name. || ít ai ngoài NASA biết tên bà.
+
+Johnson was born Katherine Coleman in 1918 in White Sulphur Springs, West Virginia.
+= Johnson tên khai sinh là Katherine Coleman, sinh năm 1918 tại White Sulphur Springs, bang West Virginia.
+  Johnson was born Katherine Coleman || Johnson tên khai sinh là Katherine Coleman,
+  in 1918 || sinh năm 1918
+  in White Sulphur Springs, West Virginia. || tại White Sulphur Springs, bang West Virginia.
+
+Her town had no schools for Black students beyond the eighth grade, so every September her father drove the children to another town where they could continue their education.
+= Thị trấn của bà không có trường cho học sinh da màu sau lớp tám, vì vậy mỗi tháng Chín, cha bà lại lái xe đưa các con đến một thị trấn khác để tiếp tục đi học.
+  Her town had no schools for Black students || Thị trấn của bà không có trường cho học sinh da màu
+  beyond the eighth grade, || sau lớp tám,
+  so every September || vì vậy cứ mỗi tháng Chín
+  her father drove the children to another town || cha bà lại lái xe đưa các con đến một thị trấn khác
+  where they could continue their education. || nơi chúng có thể tiếp tục việc học.
+
+She was an exceptionally gifted student and later became a teacher.
+= Bà là một học sinh đặc biệt có năng khiếu và sau này trở thành giáo viên.
+  She was an exceptionally gifted student || Bà là một học sinh có năng khiếu đặc biệt
+  and later became a teacher. || và sau này trở thành giáo viên.
+
+In 1939, she was one of only three Black students to enter the state's graduate schools, which had previously been open only to white students.
+= Năm 1939, bà là một trong ba sinh viên da màu duy nhất được vào các trường sau đại học của bang, vốn trước đó chỉ dành cho sinh viên da trắng.
+  In 1939, || Năm 1939,
+  she was one of only three Black students || bà là một trong ba sinh viên da màu duy nhất
+  to enter the state's graduate schools, || được vào các trường sau đại học của bang,
+  which had previously been open || vốn trước đó chỉ mở cửa
+  only to white students. || cho sinh viên da trắng.
+
+In 1953, Johnson joined a group of Black women known as "computers" at a research laboratory in Hampton, Virginia, which later became part of NASA.
+= Năm 1953, Johnson gia nhập một nhóm phụ nữ da màu được gọi là "máy tính" tại một phòng thí nghiệm nghiên cứu ở Hampton, Virginia, nơi sau này trở thành một phần của NASA.
+  In 1953, || Năm 1953,
+  Johnson joined a group of Black women || Johnson gia nhập một nhóm phụ nữ da màu
+  known as "computers" || được gọi là "máy tính"
+  at a research laboratory in Hampton, Virginia, || tại một phòng thí nghiệm nghiên cứu ở Hampton, bang Virginia,
+  which later became part of NASA. || nơi sau này trở thành một phần của NASA.
+
+The women worked in a separate unit, and signs even told them which bathrooms they could use.
+= Những người phụ nữ này làm việc trong một bộ phận tách biệt, và biển báo thậm chí còn chỉ định họ được dùng nhà vệ sinh nào.
+  The women worked in a separate unit, || Những người phụ nữ này làm việc trong một bộ phận riêng biệt,
+  and signs even told them || và các biển báo thậm chí còn chỉ định họ
+  which bathrooms they could use. || được dùng nhà vệ sinh nào.
+
+Johnson first worked on aircraft research, but she soon moved to the nation's first human spaceflight programme.
+= Ban đầu Johnson nghiên cứu về máy bay, nhưng bà sớm chuyển sang chương trình đưa người vào vũ trụ đầu tiên của nước Mỹ.
+  Johnson first worked on aircraft research, || Ban đầu Johnson làm nghiên cứu về máy bay,
+  but she soon moved to || nhưng bà sớm chuyển sang
+  the nation's first human spaceflight programme. || chương trình bay vào vũ trụ có người lái đầu tiên của nước Mỹ.
+
+In 1961, she worked out the path of Alan Shepard's flight, the first to carry an American into space.
+= Năm 1961, bà tính toán đường bay cho chuyến bay của Alan Shepard, chuyến bay đầu tiên đưa một người Mỹ lên vũ trụ.
+  In 1961, || Năm 1961,
+  she worked out the path of Alan Shepard's flight, || bà tính toán quỹ đạo chuyến bay của Alan Shepard,
+  the first to carry an American into space. || chuyến bay đầu tiên đưa một người Mỹ lên vũ trụ.
+
+Her most famous moment came in 1962.
+= Khoảnh khắc nổi tiếng nhất của bà đến vào năm 1962.
+
+Before John Glenn's flight around the Earth, an electronic computer had worked out his orbit, but Glenn did not fully trust the machine.
+= Trước chuyến bay vòng quanh Trái Đất của John Glenn, một máy tính điện tử đã tính ra quỹ đạo của ông, nhưng Glenn không hoàn toàn tin vào cỗ máy.
+  Before John Glenn's flight around the Earth, || Trước chuyến bay vòng quanh Trái Đất của John Glenn,
+  an electronic computer had worked out his orbit, || một máy tính điện tử đã tính ra quỹ đạo bay của ông,
+  but Glenn did not fully trust the machine. || nhưng Glenn không hoàn toàn tin cỗ máy.
+
+He insisted that "the girl" check the numbers by hand before he would fly.
+= Ông nhất quyết yêu cầu "cô gái ấy" kiểm tra lại các con số bằng tay rồi mới chịu bay.
+  He insisted || Ông khăng khăng yêu cầu
+  that "the girl" check the numbers by hand || rằng "cô gái ấy" phải kiểm tra các con số bằng tay
+  before he would fly. || trước khi ông chịu bay.
+
+Johnson later said that her work on the Apollo moon missions was her greatest contribution, and she stayed at NASA until she retired in 1986.
+= Sau này Johnson nói rằng công việc cho các sứ mệnh Mặt Trăng Apollo là đóng góp lớn nhất của bà, và bà làm việc ở NASA cho đến khi nghỉ hưu năm 1986.
+  Johnson later said || Sau này Johnson nói
+  that her work on the Apollo moon missions || rằng công việc của bà cho các sứ mệnh lên Mặt Trăng Apollo
+  was her greatest contribution, || là đóng góp lớn nhất của bà,
+  and she stayed at NASA || và bà làm việc ở NASA
+  until she retired in 1986. || cho đến khi nghỉ hưu năm 1986.
+
+Johnson's story became widely known only late in her life.
+= Câu chuyện của Johnson chỉ được biết đến rộng rãi khi bà đã về già.
+  Johnson's story became widely known || Câu chuyện của Johnson chỉ được biết đến rộng rãi
+  only late in her life. || khi bà đã về già.
+
+In 2015, at the age of 97, she received the Presidential Medal of Freedom, America's highest civilian honour.
+= Năm 2015, ở tuổi 97, bà nhận Huân chương Tự do của Tổng thống, vinh dự dân sự cao quý nhất nước Mỹ.
+  In 2015, at the age of 97, || Năm 2015, ở tuổi 97,
+  she received the Presidential Medal of Freedom, || bà nhận Huân chương Tự do của Tổng thống,
+  America's highest civilian honour. || vinh dự dân sự cao quý nhất của nước Mỹ.
+
+A year later, the book and film Hidden Figures told the story of Johnson and two of her colleagues to millions of people around the world.
+= Một năm sau, cuốn sách và bộ phim Hidden Figures đã kể câu chuyện của Johnson và hai đồng nghiệp cho hàng triệu người trên khắp thế giới.
+  A year later, || Một năm sau,
+  the book and film Hidden Figures || cuốn sách và bộ phim Hidden Figures (Những số phận bị lãng quên)
+  told the story of Johnson and two of her colleagues || kể câu chuyện về Johnson và hai đồng nghiệp của bà
+  to millions of people around the world. || cho hàng triệu người trên khắp thế giới.
+
+The film was nominated for the Oscar for Best Picture and earned more than $200 million worldwide.
+= Bộ phim được đề cử giải Oscar Phim hay nhất và thu về hơn 200 triệu đô la trên toàn thế giới.
+  The film was nominated || Bộ phim được đề cử
+  for the Oscar for Best Picture || giải Oscar cho Phim hay nhất
+  and earned more than $200 million worldwide. || và thu về hơn 200 triệu đô la trên toàn thế giới.
+
+In her later years, she encouraged young people to study science and maths, often repeating a lesson from her father: she was as good as anybody, but no better.
+= Những năm cuối đời, bà khuyến khích người trẻ học khoa học và toán, thường nhắc lại bài học của cha: bà giỏi ngang bất kỳ ai, nhưng không hơn ai.
+  In her later years, || Trong những năm cuối đời,
+  she encouraged young people || bà khuyến khích người trẻ
+  to study science and maths, || học khoa học và toán,
+  often repeating a lesson from her father: || thường nhắc lại một bài học từ cha mình:
+  she was as good as anybody, || bà giỏi ngang bất kỳ ai,
+  but no better. || nhưng không hơn ai.

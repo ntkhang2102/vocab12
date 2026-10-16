@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vocabulary 12</title>
+<meta name="description" content="App học từ vựng và đọc hiểu đi kèm bộ Tài liệu Reading – Vocabulary 12">
+<meta name="theme-color" content="#F4F6FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1320" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Vocab 12">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="book">
+      <button type="button" class="unit-btn" id="unitBtn" aria-label="Chọn Part và Unit">
+        <small id="bookLine">Tài liệu Reading · Vocabulary 12</small>
+        <span class="h1row"><h1 id="unitTitle">Đang tải…</h1><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+      </button>
+      <button type="button" class="icon-btn" id="setBtn" aria-label="Cài đặt">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        <span class="dot-new" id="newDot" hidden></span>
+      </button>
+    </div>
+    <div class="strip" id="strip"></div>
+  </header>
+  <div id="banner"></div>
+  <main id="main"><div class="sec"><p class="muted">Đang tải dữ liệu…</p></div></main>
+</div>
+<nav class="nav" aria-label="Chức năng"><div class="nav-in" id="nav"></div></nav>
+<div id="overlay"></div>
+<div class="toast" id="toast" hidden></div>
+<noscript><p style="padding:16px">App cần bật JavaScript để chạy.</p></noscript>
+
+<script src="js/core.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/review.js"></script>
+<script src="js/read.js"></script>
+<script src="js/practice.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/notebook.js"></script>
+<script src="js/speak.js"></script>
+<script src="js/write.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
