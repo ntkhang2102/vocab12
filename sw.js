@@ -1,14 +1,14 @@
 /* Service worker — Vocabulary 12
    - Phần khung app: lấy từ bộ nhớ đệm (chạy được khi không có mạng).
-   - Nội dung (content/*.json): ưu tiên mạng để nhận bản mới, mất mạng thì dùng bản đã lưu.
+   - Nội dung (content/*.bin, đã mã hoá): ưu tiên mạng để nhận bản mới, mất mạng thì dùng bản đã lưu.
    Khi đổi phiên bản app: tăng VERSION bên dưới (khớp APP_VERSION trong js/core.js). */
-const VERSION = '0.1.0';
+const VERSION = '0.3.0';
 const SHELL_CACHE = 'v12-shell-' + VERSION;
 const CONTENT_CACHE = 'v12-content';
 const FONT_CACHE = 'v12-fonts';
 const SHELL = [
   './', 'index.html', 'css/app.css', 'manifest.webmanifest',
-  'js/core.js', 'js/learn.js', 'js/review.js', 'js/read.js', 'js/practice.js', 'js/quiz.js',
+  'js/auth.js', 'js/core.js', 'js/learn.js', 'js/review.js', 'js/read.js', 'js/practice.js', 'js/quiz.js',
   'js/notebook.js', 'js/speak.js', 'js/write.js', 'js/settings.js', 'js/main.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'
 ];

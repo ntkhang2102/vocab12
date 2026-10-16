@@ -56,24 +56,73 @@ async function selectUnit(id) {
 }
 function syncHeaderVar() { const h = document.querySelector('.top'); if (h) document.documentElement.style.setProperty('--hdr', h.offsetHeight + 'px') }
 
+/* ---------- màn hình đăng nhập ---------- */
+function showLogin(msg) {
+  document.body.classList.add('locked');
+  $('#unitTitle').textContent = 'Vocabulary 12'; $('#bookLine').textContent = 'Tài liệu Reading · Vocabulary 12';
+  $('#strip').innerHTML = ''; $('#nav').innerHTML = ''; $('#banner').innerHTML = '';
+  $('#main').innerHTML = `<section class="sec login">
+    <img src="icons/icon-192.png" alt="" width="72" height="72" style="border-radius:18px">
+    <div><h2>Đăng nhập</h2><p class="muted" style="margin:4px 0 0">Nhập mã do giáo viên cấp để mở tài liệu. Chỉ cần nhập một lần trên mỗi máy.</p></div>
+    ${msg ? `<div class="notice">${esc(msg)}</div>` : ''}
+    <form id="loginF" class="panel" style="display:grid;gap:10px">
+      <label class="fld"><span class="label">Mã đăng nhập</span>
+        <input class="input" id="codeI" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="VD: K7M2Q-9XRTD" style="font-size:20px;letter-spacing:.06em;text-transform:uppercase"></label>
+      <div class="small" id="loginErr" style="color:var(--bad)"></div>
+      <button class="btn" type="submit" id="loginBtn">Đăng nhập</button>
+    </form>
+    <p class="small muted" style="margin:0">Chưa có mã hoặc quên mã? Liên hệ giáo viên. Tiến độ học vẫn được giữ trên máy khi đăng nhập lại.</p>
+  </section>`;
+  const f = $('#loginF'), inp = $('#codeI'), btn = $('#loginBtn'), err = $('#loginErr');
+  setTimeout(() => inp.focus({ preventScroll: true }), 200);
+  f.onsubmit = async e => {
+    e.preventDefault(); err.textContent = ''; btn.disabled = true; btn.textContent = 'Đang kiểm tra…';
+    const r = await Auth.login(inp.value);
+    if (!r.ok) { err.textContent = r.msg; btn.disabled = false; btn.textContent = 'Đăng nhập'; return }
+    document.body.classList.remove('locked'); toast('Đăng nhập thành công'); boot();
+  };
+}
+function logout() {
+  Auth.logout(); try { localStorage.removeItem('v12-catalog') } catch (e) { }
+  U = null; for (const k in UNITS) delete UNITS[k]; CATALOG = null;
+  closeModal(); showLogin();
+}
+
 async function boot() {
-  try { await loadCatalog() } catch (e) { $('#main').innerHTML = `<div class="sec"><div class="notice">${esc(e.message)}</div></div>`; $('#unitTitle').textContent = 'Vocabulary 12'; return }
+  if (!Auth.supported()) { $('#main').innerHTML = '<div class="sec"><div class="notice">Trình duyệt này không hỗ trợ mở tài liệu. Hãy cập nhật iOS hoặc dùng Safari / Chrome mới.</div></div>'; return }
+  if (!Auth.key && !(await Auth.restore())) return showLogin();
+  // Giáo viên đã đổi khoá (thu hồi mã)? — chỉ kiểm tra được khi có mạng
+  try { const kr = await Auth.fetchKeyring(); if (kr.keyVersion !== Auth.ver) { Auth.logout(); return showLogin('Mã đăng nhập đã được giáo viên đổi. Hãy nhập mã mới.') } } catch (e) { }
+  try { await loadCatalog() }
+  catch (e) {
+    if (e.kind === 'key') { Auth.logout(); return showLogin('Phiên đăng nhập không còn hợp lệ. Hãy nhập lại mã.') }
+    $('#main').innerHTML = `<div class="sec"><div class="notice">${esc(e.message)}</div></div>`; $('#unitTitle').textContent = 'Vocabulary 12'; return
+  }
+  document.body.classList.remove('locked');
   const av = availableUnits();
   if (!av.length) { $('#main').innerHTML = '<div class="sec"><div class="notice">Chưa có Unit nào được mở.</div></div>'; return }
   const first = !S.cur;
   const cur = S.cur && av.some(u => u.id === S.cur) ? S.cur : (CATALOG.defaultUnit && av.some(u => u.id === CATALOG.defaultUnit) ? CATALOG.defaultUnit : av[0].id);
   // Phiên bản: lần đầu mở app thì ghi nhận luôn; nội dung đổi nhưng không có ghi chú thì cập nhật âm thầm.
-  if (!S.seen.app) { S.seen.app = APP_VERSION; av.forEach(u => S.seen.units[u.id] = u.contentVersion); save() }
-  av.forEach(u => { if (!S.seen.units[u.id] || (S.seen.units[u.id] !== u.contentVersion && !(u.changes && u.changes.length))) S.seen.units[u.id] = u.contentVersion });
+  const all = av.concat(availableTopics());
+  if (!S.seen.app) { S.seen.app = APP_VERSION; all.forEach(u => S.seen.units[u.id] = u.contentVersion); save() }
+  all.forEach(u => { if (!S.seen.units[u.id] || (S.seen.units[u.id] !== u.contentVersion && !(u.changes && u.changes.length))) S.seen.units[u.id] = u.contentVersion });
   save();
   await selectUnit(cur);
   updateNewsDot(); syncHeaderVar();
   if (first) openUnitPicker();
-  // Tải sẵn mọi Unit đã mở để học được khi không có mạng.
-  setTimeout(() => av.forEach(u => fetch('content/' + u.id + '.json').catch(() => { })), 3000);
+  // Tải sẵn mọi nội dung đã mở để học được khi không có mạng (file vẫn ở dạng mã hoá).
+  // Chỉ tải file chưa có hoặc đã đổi phiên bản, tải lần lượt từng file để không nghẽn mạng.
+  setTimeout(async () => {
+    let got = {}; try { got = JSON.parse(localStorage.getItem('v12-pref') || '{}') } catch (e) { }
+    for (const u of all) {
+      if (got[u.id] === u.contentVersion) continue;
+      try { const r = await fetch('content/' + u.id + '.bin'); if (r.ok) { got[u.id] = u.contentVersion; try { localStorage.setItem('v12-pref', JSON.stringify(got)) } catch (e) { } } } catch (e) { break }
+    }
+  }, 3000);
 }
-$('#unitBtn').onclick = () => CATALOG && openUnitPicker();
-$('#setBtn').onclick = () => CATALOG && openSettings();
+$('#unitBtn').onclick = () => CATALOG && Auth.key && openUnitPicker();
+$('#setBtn').onclick = () => CATALOG && Auth.key && openSettings();
 window.addEventListener('resize', syncHeaderVar);
 window.addEventListener('pageshow', () => { if (U) { renderStrip() } });
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && U) renderStrip(); else { Mic.stop() } });

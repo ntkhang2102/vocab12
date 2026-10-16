@@ -2,25 +2,55 @@
    3. ĐỌC BÀI — đọc toàn bài, quét dịch Từ/Cụm/Câu/Đoạn, nghe cả bài,
    song ngữ, đọc theo bằng micro. Bản dịch do Claude soạn được gắn nhãn.
    ========================================================= */
+/* Các dạng gốc có thể của một từ (số nhiều, quá khứ, -ing, so sánh hơn…) — khớp với tools/ khi kiểm tra độ phủ từ điển */
+function wordForms(w) {
+  let lw = w.toLowerCase().replace(/[’]/g, "'");
+  const out = [lw], add = x => { if (x && x.length >= 2 && !out.includes(x)) out.push(x) };
+  lw = lw.replace(/'s$/, ''); add(lw);
+  if (/s'$/.test(lw)) { lw = lw.slice(0, -1); add(lw) }
+  [['ies', 'y'], ['ied', 'y'], ['ier', 'y'], ['iest', 'y'], ['ily', 'y']].forEach(([s, r]) => { if (lw.endsWith(s)) add(lw.slice(0, -s.length) + r) });
+  ['es', 's', 'ed', 'd', 'ing', 'er', 'est', 'ly', 'r', 'st'].forEach(s => {
+    if (lw.endsWith(s) && lw.length - s.length >= 2) {
+      const b = lw.slice(0, -s.length); add(b);
+      if (['ed', 'ing', 'er', 'est'].includes(s)) { add(b + 'e'); if (b.length >= 3 && b[b.length - 1] === b[b.length - 2]) add(b.slice(0, -1)) }
+    }
+  });
+  return out;
+}
+let _G = null, _GU = null;
 function glossOf(w) {
-  const lw = w.toLowerCase().replace(/[’]/g, "'");
-  const G = Object.assign({}, GLOSS, U.gloss || {});
-  return G[lw] || G[lw.replace(/'s$/, '')] || G[lw.replace(/(ies)$/, 'y')] || G[lw.replace(/(es|s)$/, '')] || G[lw.replace(/(ed|d)$/, '')] || G[lw.replace(/ing$/, '')] || null;
+  if (!_G || _GU !== (U && U.id)) { _G = Object.assign({}, GLOSS); Object.entries(U.gloss || {}).forEach(([k, v]) => _G[k.toLowerCase()] = v); _GU = U && U.id }
+  for (const f of wordForms(w)) if (_G[f]) return _G[f];
+  return null;
 }
 function unitWordOf(w) {
   const lw = w.toLowerCase().replace(/'s$/, '');
   if (lw.length < 3) return null;
   return U.WORDS.find(v => { if (v.word.includes(' ')) return false; const st = v.word.slice(0, Math.max(4, v.word.length - 3)).toLowerCase(); return lw.startsWith(st) && lw.length <= v.word.length + 3 }) || null;
 }
-const cleanWord = s => s.replace(/^[^A-Za-z]+|[^A-Za-z'-]+$/g, '');
+const cleanWord = s => s.replace(/^[^A-Za-zÀ-ÿ]+|[^A-Za-zÀ-ÿ'’-]+$/g, '');
 const Reader = {
-  t: 0, mode: 'word', sel: null, showVi: false, playing: null, mic: null, rate: 0.9, unit: null,
-  text() { return U.texts[this.t] },
+  t: 0, mode: 'word', sel: null, showVi: false, playing: null, mic: null, rate: 0.9, unit: null, lib: 'book', topicId: null,
+  D() { return this.lib === 'topic' ? UNITS[this.topicId] : U },
+  text() { return this.D().texts[this.t] },
   hasMT(T) { return T.paras.some(p => p.some(s => s.by !== 'gv')) },
   render(el) {
-    if (this.unit !== U.id) { this.unit = U.id; this.t = 0; this.sel = null; this.mic = null }
-    if (!U.texts || !U.texts.length) { el.innerHTML = `<section class="sec"><div class="sec-h"><div><h2>Đọc toàn bài</h2></div></div><div class="panel muted">Unit này chưa có bài đọc.</div></section>`; return }
-    if (this.t >= U.texts.length) this.t = 0;
+    const tps = availableTopics();
+    if (this.lib === 'book' && this.unit !== U.id) { this.unit = U.id; this.t = 0; this.sel = null; this.mic = null }
+    const libSeg = tps.length ? `<div class="seg"><button type="button" class="chip" data-lib="book" aria-pressed="${this.lib === 'book'}">Bài đọc trong sách</button><button type="button" class="chip" data-lib="topic" aria-pressed="${this.lib === 'topic'}">Tài liệu theo chủ đề</button></div>` : '';
+    const bindLib = () => el.querySelectorAll('[data-lib]').forEach(b => b.onclick = () => { this.stop(); Mic.stop(); this.lib = b.dataset.lib; this.t = 0; this.sel = null; this.mic = null; this.render(el) });
+    if (this.lib === 'topic') {
+      if (!this.topicId || !tps.some(t => t.id === this.topicId)) this.topicId = tps[0] && tps[0].id;
+      if (!this.topicId) this.lib = 'book';
+      else if (!UNITS[this.topicId]) {
+        el.innerHTML = `<section class="sec">${libSeg}<p class="muted">Đang tải tài liệu…</p></section>`; bindLib();
+        loadUnit(this.topicId).then(() => { if (tab === 'read' && this.lib === 'topic') this.render(el) }).catch(() => { el.querySelector('p').textContent = 'Không tải được tài liệu. Kiểm tra mạng rồi thử lại.' });
+        return;
+      }
+    }
+    const D = this.D();
+    if (!D.texts || !D.texts.length) { el.innerHTML = `<section class="sec">${libSeg}<div class="sec-h"><div><h2>Đọc toàn bài</h2></div></div><div class="panel muted">Chưa có bài đọc.</div></section>`; bindLib(); return }
+    if (this.t >= D.texts.length) this.t = 0;
     const T = this.text();
     const modes = [['word', 'Từ'], ['chunk', 'Cụm'], ['sent', 'Câu'], ['para', 'Đoạn']];
     const paras = T.paras.map((p, pi) => {
@@ -36,8 +66,10 @@ const Reader = {
     }).join('');
     const mt = this.hasMT(T) ? `<div style="margin-bottom:10px"><span class="mt-tag" title="Bản dịch câu và cụm do Claude soạn, giáo viên sẽ duyệt lại">Bản dịch do Claude soạn · chờ GV duyệt</span></div>` : '';
     el.innerHTML = `<section class="sec reader">
-   <div class="sec-h"><div><h2>Đọc toàn bài</h2><p>Chạm vào bài để xem nghĩa theo từ, cụm, câu hoặc cả đoạn. Nghe mẫu rồi bấm micro để đọc theo.</p></div></div>
-   <div class="seg">${U.texts.map((x, i) => `<button type="button" class="chip" data-t="${i}" aria-pressed="${i === this.t}">${esc(x.label)}</button>`).join('')}</div>
+   ${libSeg}
+   <div class="sec-h"><div><h2>${this.lib === 'topic' ? esc(D.title) : 'Đọc toàn bài'}</h2><p>Chạm vào bài để xem nghĩa theo từ, cụm, câu hoặc cả đoạn. Nghe mẫu rồi bấm micro để đọc theo.</p></div></div>
+   ${this.lib === 'topic' && tps.length > 1 ? `<div class="seg">${tps.map(t => `<button type="button" class="chip" data-tp="${t.id}" aria-pressed="${t.id === this.topicId}">${esc(t.title)}</button>`).join('')}</div>` : ''}
+   <div class="seg">${D.texts.map((x, i) => `<button type="button" class="chip" data-t="${i}" aria-pressed="${i === this.t}">${esc(x.label)}</button>`).join('')}</div>
    <div class="panel" style="display:grid;gap:10px">
      <div class="row"><span class="label">Quét dịch theo</span><div class="tabs" role="tablist">${modes.map(([k, l]) => `<button type="button" role="tab" data-m="${k}" aria-selected="${this.mode === k}">${l}</button>`).join('')}</div></div>
      <div class="row"><button class="btn ${this.playing ? '' : 'soft'}" type="button" id="playAll">${this.playing ? '■ Dừng đọc' : '▶ Nghe cả bài'}</button>
@@ -49,10 +81,11 @@ const Reader = {
    ${this.mine()}
   </section>${this.sheet()}`;
     document.body.classList.toggle('sheet-open', !!this.sel);
-    this.bind(el); this.mark(el);
+    this.bind(el); this.mark(el); bindLib();
+    el.querySelectorAll('[data-tp]').forEach(b => b.onclick = () => { this.stop(); this.topicId = b.dataset.tp; this.t = 0; this.sel = null; this.render(el) });
   },
   mine() {
-    const L = (S.mine || []).filter(x => !x.unit || x.unit === U.id); if (!L.length) return '';
+    const L = (S.mine || []).filter(x => !x.unit || x.unit === this.D().id); if (!L.length) return '';
     return `<div class="panel" style="display:grid;gap:6px"><div class="label">Sổ từ của tôi (${L.length})</div>${L.slice().reverse().map(x => `<div class="small"><b>${esc(x.w)}</b> · ${esc(x.vi)} <span class="muted">— ${esc(x.ctx)}</span></div>`).join('')}</div>`
   },
   parts(key) { const [pi, si, ci, k] = key.split('.').map(Number); const T = this.text(); const s = T.paras[pi] && T.paras[pi][si]; const chunks = s ? (s.chunks && s.chunks.length ? s.chunks : [[s.en, s.vi || '']]) : []; return { pi, si, ci, k, p: T.paras[pi], s, c: chunks[ci] } },
@@ -64,7 +97,7 @@ const Reader = {
     let en = '', body = '', head = '';
     if (kind === 'word') {
       const w = this.wordAt(P);
-      const g = glossOf(w), u = unitWordOf(w); en = w;
+      const g = glossOf(w), u = this.lib === 'book' ? unitWordOf(w) : null; en = w;
       head = `<div class="row"><span class="sheet-w">${esc(w)}</span>${spkBtn(w, 'Nghe')} ${spkBtn(w, 'Chậm', 'en-US', 0.55)}</div>`;
       body = `${g ? `<div class="sheet-vi">${esc(g)} <span class="mt-tag">nghĩa tra nhanh · máy soạn</span></div>` : '<div class="small muted">Tên riêng hoặc từ chưa có trong từ điển bài đọc.</div>'}
       ${u ? `<div class="unitw"><span class="tag src2">Từ trong ${esc(unitLabel(U.id))}</span> <b>${esc(u.word)}</b> ${u.ipa ? `<span class="ipa">${esc(u.ipa)}</span>` : ''} · ${esc(u.meaning)}</div>` : ''}
@@ -102,7 +135,7 @@ const Reader = {
     el.querySelector('#showVi').onchange = e => { this.showVi = e.target.checked; this.render(el) };
     el.querySelector('#slow').onchange = e => { this.rate = e.target.checked ? 0.7 : 0.9 };
     el.querySelector('#playAll').onclick = () => { this.playing ? (this.stop(), this.render(el)) : this.playFrom(el, 0, 0) };
-    const tq = el.querySelector('#toQs'); if (tq) tq.onclick = () => { Practice.open(this.text().set, 'practice'); go('practice') };
+    const tq = el.querySelector('#toQs'); if (tq) tq.onclick = () => { if (this.lib === 'topic') Practice.openTopic(this.topicId, this.text().set, 'practice'); else Practice.open(this.text().set, 'practice'); go('practice') };
     el.querySelector('.doc').onclick = e => {
       const w = e.target.closest('.w'); if (!w) return;
       const key = w.dataset.w; const [pi, si, ci] = key.split('.');
@@ -125,7 +158,7 @@ const Reader = {
     const am = document.getElementById('addMine');
     if (am) am.onclick = () => {
       const P = this.parts(this.sel.key); const w = this.wordAt(P);
-      S.mine = S.mine || []; if (!S.mine.some(x => x.w.toLowerCase() === w.toLowerCase())) { S.mine.push({ w, vi: glossOf(w), ctx: P.c[0], unit: U.id }); save(); toast('Đã lưu “' + w + '” vào Sổ từ') } else toast('Từ này đã có trong Sổ từ'); this.render(el)
+      S.mine = S.mine || []; if (!S.mine.some(x => x.w.toLowerCase() === w.toLowerCase())) { S.mine.push({ w, vi: glossOf(w), ctx: P.c[0], unit: this.D().id }); save(); toast('Đã lưu “' + w + '” vào Sổ từ') } else toast('Từ này đã có trong Sổ từ'); this.render(el)
     };
   },
   stop() { if (this.playing) { this.playing = null; try { speechSynthesis.cancel() } catch (e) { } } },

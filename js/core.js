@@ -3,7 +3,7 @@
    (trạng thái, tải nội dung, âm thanh, micro, Hỏi AI, tiện ích)
    ========================================================= */
 'use strict';
-const APP_VERSION = '0.1.0';
+const APP_VERSION = '0.3.0';
 const STORE_KEY = 'v12-state';
 const INTERVALS = [0, 1, 3, 7, 14, 30];
 
@@ -50,28 +50,34 @@ let CATALOG = null, GLOSS = {};
 const UNITS = {};
 let U = null; // Unit đang học
 
-async function fetchJSON(url) {
-  const r = await fetch(url, { cache: 'no-cache' });
-  if (!r.ok) throw new Error(url + ' ' + r.status);
-  return r.json();
-}
 async function loadCatalog() {
-  try { CATALOG = await fetchJSON('content/catalog.json'); try { localStorage.setItem('v12-catalog', JSON.stringify(CATALOG)) } catch (e) { } }
-  catch (e) { try { CATALOG = JSON.parse(localStorage.getItem('v12-catalog')) } catch (_) { } }
+  try { CATALOG = await fetchEnc('content/catalog.bin'); try { localStorage.setItem('v12-catalog', JSON.stringify(CATALOG)) } catch (e) { } }
+  catch (e) {
+    if (e.kind === 'key') throw e; // sai khoá → phải đăng nhập lại
+    try { CATALOG = JSON.parse(localStorage.getItem('v12-catalog')) } catch (_) { }
+  }
   if (!CATALOG) throw new Error('Không tải được danh mục nội dung. Kiểm tra kết nối mạng rồi mở lại app.');
-  try { GLOSS = await fetchJSON('content/gloss.json') } catch (e) { GLOSS = {} }
+  CATALOG.topics = CATALOG.topics || [];
+  try { GLOSS = await fetchEnc('content/gloss.bin') } catch (e) { GLOSS = {} }
 }
 function allUnits() { return CATALOG.parts.flatMap(p => p.units.map(u => Object.assign({ part: p.part, level: p.level }, u))) }
-function unitMeta(id) { return allUnits().find(u => u.id === id) }
+function topicMeta(id) { return CATALOG.topics.find(t => t.id === id) }
+function unitMeta(id) { return allUnits().find(u => u.id === id) || (topicMeta(id) ? Object.assign({ kind: 'topic' }, topicMeta(id)) : null) }
 function availableUnits() { return allUnits().filter(u => u.ready) }
-function unitLabel(id, short) { const m = unitMeta(id); if (!m) return id; return short ? `P${m.part}·U${m.unit}` : `Part ${m.part} · Unit ${m.unit}` }
+function availableTopics() { return CATALOG.topics.filter(t => t.ready) }
+function unitLabel(id, short) {
+  const m = unitMeta(id); if (!m) return id;
+  if (m.kind === 'topic') return short ? (m.topic || 'Chủ đề') : m.title;
+  return short ? `P${m.part}·U${m.unit}` : `Part ${m.part} · Unit ${m.unit}`;
+}
 
 async function loadUnit(id) {
   if (UNITS[id]) return UNITS[id];
-  const raw = await fetchJSON('content/' + id + '.json');
+  const raw = await fetchEnc('content/' + id + '.bin');
   return (UNITS[id] = prepareUnit(raw));
 }
 function prepareUnit(d) {
+  d.vocab = d.vocab || [];
   d.vocab.forEach(v => { v.id = d.id + ':' + (v.key || slug(v.word)); v.unit = d.id });
   d.byId = Object.fromEntries(d.vocab.map(v => [v.id, v]));
   d.WORDS = d.vocab.filter(v => v.type === 'word');
@@ -142,6 +148,24 @@ function explHTML(lines, ans) {
 function mcHTML(opts, name) { return '<div class="opts">' + opts.map((o, i) => `<button type="button" class="opt" data-${name}="${i}"><span class="k">${'ABCD'[i]}</span><span>${inl(o)}</span></button>`).join('') + '</div>' }
 function lockMC(root, attr, chosen, ans) {
   root.querySelectorAll(`[data-${attr}]`).forEach(b => { const i = +b.dataset[attr]; b.disabled = true; if (i === ans) b.classList.add('ok'); else if (i === chosen) b.classList.add('no') });
+}
+
+/* Phần đáp án sau khi trả lời (Ôn tập, Kiểm tra, Sổ sai): nghĩa, cấu trúc/collocation, câu ví dụ và bản dịch */
+function patternFor(v) {
+  const UU = UNITS[v.unit]; if (!UU || !UU.patterns) return null;
+  const base = v.word.toLowerCase().replace(/\(.*?\)/g, '').trim();
+  const key = base.split(' ')[0];
+  return UU.patterns.find(p => { const s = p.p.toLowerCase(); return s.includes(base) || (key.length > 3 && new RegExp('\\b' + key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(s)) }) || null;
+}
+function answerInfoHTML(v) {
+  const pt = patternFor(v);
+  return `<div class="ansinfo">
+    <div><b>${esc(v.word)}</b>${v.pos && v.type === 'word' ? ` <span class="muted">(${esc(v.pos)})</span>` : ''} · ${esc(v.meaning)}</div>
+    ${pt ? `<div><span class="label">Cấu trúc</span> ${esc(pt.p)}${pt.m ? ` <span class="muted">— ${esc(pt.m)}</span>` : ''}</div>` : ''}
+    ${v.colloc ? `<div><span class="label">Collocation</span> ${esc(v.colloc)}</div>` : ''}
+    ${v.ex ? `<div class="ex" style="font-size:15.5px">${highlight(v.ex, v.cloze)}</div>` : ''}
+    ${v.tr ? `<div class="tr">${esc(v.tr)}</div>` : ''}
+  </div>`;
 }
 
 /* ---------- so khớp lời nói ---------- */

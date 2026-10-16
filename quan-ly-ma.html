@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quản lý mã · Vocabulary 12</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Literata:opsz,wght@7..72,600&display=swap">
+<link rel="stylesheet" href="css/app.css">
+<style>
+.wrap{padding-bottom:48px;max-width:760px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.code{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600;letter-spacing:.04em;white-space:nowrap}
+.ok{color:var(--good);font-weight:600}.no{color:var(--bad);font-weight:600}.wait{color:var(--warn);font-weight:600}
+.step{display:flex;gap:10px;align-items:flex-start}.step b.n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px}
+@media print{body *{visibility:hidden}#printArea,#printArea *{visibility:visible}#printArea{position:absolute;inset:0;padding:12px}
+ .slip{border:1px dashed #999;padding:10px 12px;margin:0 0 8px;break-inside:avoid;font-family:sans-serif}.slip b{font-family:monospace;font-size:18px;letter-spacing:.08em}}
+#printArea{display:none}
+@media print{#printArea{display:block}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top" style="position:static"><div class="book"><div><small class="label">Vocabulary 12 · Giáo viên</small><h1 style="font-family:var(--f-word);font-size:20px;margin:2px 0 0">Quản lý mã đăng nhập</h1></div><a class="btn ghost sm" href="index.html">Về app</a></div></header>
+  <div id="main" class="sec"><p class="muted">Đang tải…</p></div>
+</div>
+<div id="printArea"></div>
+<div class="toast" id="toast" hidden></div>
+<script src="js/auth.js"></script>
+<script>
+'use strict';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let tt;function toast(m,ms){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,ms||2800)}
+const LIST_KEY='v12-admin-codes';
+let KR=null, RAW=null, KEY=null, LIST=[], dirty=false, PUB=new Set();
+function loadList(){try{LIST=JSON.parse(localStorage.getItem(LIST_KEY)||'[]')}catch(e){LIST=[]}}
+function saveList(){try{localStorage.setItem(LIST_KEY,JSON.stringify(LIST))}catch(e){}}
+const inKR=id=>KR.entries.some(e=>e.id===id);
+
+/* ---------- đăng nhập trang quản lý ---------- */
+async function start(){
+  if(!Auth.supported()){$('#main').innerHTML='<div class="notice">Trình duyệt không hỗ trợ. Hãy dùng Chrome, Edge hoặc Safari mới.</div>';return}
+  loadList();
+  try{KR=await Auth.fetchKeyring();PUB=new Set(KR.entries.map(e=>e.id))}catch(e){$('#main').innerHTML='<div class="notice">Không tải được content/keyring.json.</div>';return}
+  loginView();
+}
+function loginView(msg){
+  $('#main').innerHTML=`<div class="panel" style="display:grid;gap:12px;max-width:520px">
+   <p style="margin:0">Đăng nhập bằng <b>mã giáo viên</b> hoặc dán nội dung file <b>KHOA-NOI-DUNG.txt</b>.</p>
+   ${msg?`<div class="notice">${esc(msg)}</div>`:''}
+   <form id="lf" style="display:grid;gap:8px"><input class="input" id="lc" placeholder="Mã giáo viên, VD: GV-XXXXX-XXXXX" autocapitalize="characters" autocomplete="off">
+   <button class="btn">Đăng nhập bằng mã</button></form>
+   <details><summary class="small" style="cursor:pointer;color:var(--accent)">Dùng file khoá nội dung (khi quên mã giáo viên)</summary>
+    <div style="display:grid;gap:8px;margin-top:8px"><textarea class="input" id="lk" placeholder="Dán toàn bộ nội dung KHOA-NOI-DUNG.txt"></textarea><button class="btn soft" id="lkb" type="button">Mở bằng khoá</button></div></details>
+   <div id="le" class="small" style="color:var(--bad)"></div></div>`;
+  $('#lf').onsubmit=async e=>{e.preventDefault();const code=$('#lc').value;$('#le').textContent='Đang kiểm tra…';
+    const r=await Auth.unlock(code,KR);if(!r){$('#le').textContent='Mã không đúng hoặc không còn trong keyring.';return}
+    RAW=r.raw;
+    if(!LIST.some(x=>x.id===r.id))LIST.unshift({code:code.toUpperCase().trim(),name:'Giáo viên',id:r.id,created:new Date().toISOString().slice(0,10),role:'gv'});saveList();
+    await ready()};
+  $('#lkb').onclick=async()=>{const t=$('#lk').value;const k=(t.match(/key:\s*(\S+)/)||[])[1];const v=(t.match(/version:\s*(\S+)/)||[])[1];
+    if(!k){$('#le').textContent='Không thấy dòng "key:" trong nội dung đã dán.';return}
+    if(v&&v!==KR.keyVersion){$('#le').textContent='Khoá này là phiên bản '+v+', khác keyring hiện tại ('+KR.keyVersion+').';return}
+    RAW=b64d(k).buffer;await ready()};
+}
+async function ready(){
+  KEY=await crypto.subtle.importKey('raw',RAW,'AES-GCM',true,['encrypt','decrypt']);
+  try{await fetchEnc('content/catalog.bin',KEY)}catch(e){RAW=null;return loginView('Khoá không mở được nội dung hiện tại.')}
+  await sync();
+  view();
+}
+
+/* Đồng bộ danh sách trên máy với keyring: gộp dòng trùng mã, đưa lại mã đang dùng còn thiếu vào keyring
+   (VD: đã tạo mã nhưng tải lại trang trước khi đưa keyring lên GitHub), gỡ mã đã xoá khỏi keyring. */
+async function sync(){
+  const by=new Map();
+  for(const x of LIST){const o=by.get(x.id);if(!o){by.set(x.id,x);continue}
+    if(o.revoked&&!x.revoked){x.name=x.name||o.name;by.set(x.id,x)}else if(!o.name&&x.name)o.name=x.name}
+  const merged=[...by.values()];if(merged.length!==LIST.length){LIST=merged;saveList()}
+  let ch=0;
+  for(const x of LIST){
+    if(!x.revoked&&!inKR(x.id)){const ent=await wrapEntry(x.code,KR,RAW);if(ent.id===x.id){KR.entries.push(ent);ch++}}
+    if(x.revoked&&inKR(x.id)){KR.entries=KR.entries.filter(e=>e.id!==x.id);ch++}
+  }
+  if(ch)dirty=true;
+}
+
+/* ---------- giao diện chính ---------- */
+function view(){
+  const act=LIST.filter(x=>!x.revoked), unknown=KR.entries.filter(e=>!LIST.some(x=>x.id===e.id)).length;
+  const rows=LIST.map((x,i)=>{const on=PUB.has(x.id);
+    const st=x.revoked?(on?'<span class="wait">Đã xoá · chờ cập nhật GitHub</span>':'<span class="no">Đã xoá</span>'):(on?'<span class="ok">Đang dùng</span>':'<span class="wait">Chưa có trên GitHub</span>');
+    const btn=x.role==='gv'?'':x.revoked?(on?'':`<button class="btn ghost sm" data-hide="${i}">Gỡ khỏi danh sách</button>`):`<button class="btn ghost sm" data-del="${i}">Xoá</button>`;
+    return `<tr><td>${i+1}</td><td>${esc(x.name||'')}</td><td class="code">${esc(x.code)}</td><td>${st}</td><td>${btn}</td></tr>`}).join('');
+  $('#main').innerHTML=`
+  ${dirty?`<div class="notice"><b>Có thay đổi chưa đưa lên mạng.</b> Bấm <b>Tải keyring.json</b> rồi tải file đó vào thư mục <code>content/</code> trên GitHub (ghi đè). Mã mới chỉ dùng được sau bước này.</div>`:''}
+  ${!dirty&&LIST.some(x=>x.role!=="gv"&&(x.revoked?PUB.has(x.id):!PUB.has(x.id)))?`<div class="notice">Có mã <b>chưa khớp với GitHub</b>. Nếu đã tải keyring.json lên thư mục <code>content/</code>, đợi 1–3 phút rồi <b>tải lại trang này</b> để kiểm tra. Trạng thái sẽ chuyển thành “Đang dùng”.</div>`:''}
+  <div class="panel" style="display:grid;gap:6px"><div class="label">Trạng thái</div>
+   <div class="small">Phiên bản khoá: <b>${esc(KR.keyVersion)}</b> · Số mã trong keyring: <b>${KR.entries.length}</b> · Trong danh sách máy này: <b>${act.length}</b> mã đang dùng</div>
+   ${unknown?`<div class="small" style="color:var(--warn)">${unknown} mã có trong keyring nhưng không có trong danh sách trên máy này (đã tạo ở máy khác?). Hãy nhập file danh sách CSV để quản lý đủ.</div>`:''}
+   <div class="row" style="margin-top:6px"><button class="btn" id="dlKR">Tải keyring.json</button><button class="btn ghost" id="dlCSV">Tải danh sách mã (CSV)</button><label class="btn ghost" style="cursor:pointer">Nhập CSV<input type="file" id="upCSV" accept=".csv,text/csv" hidden></label><button class="btn ghost" id="print">In phiếu mã</button></div>
+   <p class="small muted" style="margin:4px 0 0">Danh sách mã (kèm tên học sinh) chỉ lưu trên trình duyệt này. Hãy tải file CSV cất giữ riêng; <b>không</b> đưa file CSV lên GitHub.</p></div>
+
+  <div class="panel" style="display:grid;gap:10px"><div class="label">Tạo mã mới</div>
+   <label class="fld"><span class="small">Tên học sinh, mỗi dòng một người (có thể để trống tên và chỉ nhập số lượng)</span><textarea class="input" id="names" placeholder="Nguyễn Văn A&#10;Trần Thị B"></textarea></label>
+   <div class="row"><label class="small">Số lượng (khi không nhập tên) <input class="input" id="qty" type="number" min="1" max="200" value="1" style="width:90px;display:inline-block"></label>
+    <label class="small">Tiền tố (VD: lớp) <input class="input" id="prefix" maxlength="6" placeholder="12A1" style="width:110px;display:inline-block;text-transform:uppercase"></label></div>
+   <details><summary class="small" style="cursor:pointer;color:var(--accent)">Dùng mã có sẵn (VD: mã in trên sách)</summary>
+    <textarea class="input" id="manual" style="margin-top:8px" placeholder="Mỗi dòng: MÃ;Tên học sinh"></textarea>
+    <p class="small muted">Mã có sẵn nên dài ít nhất 10 ký tự ngẫu nhiên. Mã ngắn, theo số thứ tự hoặc ghép từ lớp/năm/tên viết tắt dễ bị đoán. Nếu dùng một mã chung cho cả lớp, nên thêm vài ký tự ngẫu nhiên, VD: 12E6-NTK-7QKX.</p></details>
+   <div class="row end"><button class="btn" id="gen">Tạo mã</button></div></div>
+
+  <div class="panel"><div class="label" style="margin-bottom:6px">Danh sách mã</div>
+   ${LIST.length?`<div style="overflow:auto"><table><thead><tr><th>#</th><th>Tên</th><th>Mã</th><th>Trạng thái</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`:'<p class="muted small">Chưa có mã nào.</p>'}</div>
+
+  <div class="panel" style="display:grid;gap:8px;border-color:var(--bad)"><div class="label">Thu hồi hẳn (đổi khoá)</div>
+   <p class="small" style="margin:0">Xoá mã chỉ chặn <b>đăng nhập mới</b>. Máy đã đăng nhập bằng mã đó vẫn học được. Muốn chặn hẳn, hãy <b>đổi khoá</b>: toàn bộ nội dung được mã hoá lại bằng khoá mới, chỉ các mã đang dùng trong danh sách trên mới tiếp tục đăng nhập được. Mọi máy sẽ phải nhập lại mã, nhưng tiến độ học vẫn giữ nguyên.</p>
+   <div class="step"><b class="n">1</b><span class="small">Bấm nút dưới: trình duyệt tải về file <b>vocab12-content-khoa-moi.zip</b> (thư mục content mới) và file <b>KHOA-NOI-DUNG.txt</b> mới.</span></div>
+   <div class="step"><b class="n">2</b><span class="small">Tải <b>toàn bộ</b> file trong thư mục content của file zip lên thư mục <code>content/</code> trên GitHub (ghi đè). Cất file khoá mới thay file cũ.</span></div>
+   <div class="row"><button class="btn danger" id="rotate">Đổi khoá và mã hoá lại nội dung</button><span class="small muted" id="rotMsg"></span></div></div>`;
+  $('#dlKR').onclick=()=>{downloadBlob('keyring.json',JSON.stringify(KR,null,1),'application/json');dirty=false;toast('Đã tải keyring.json. Nhớ tải lên thư mục content/ trên GitHub.',4000);view()};
+  $('#dlCSV').onclick=()=>downloadBlob('vocab12-danh-sach-ma-'+new Date().toISOString().slice(0,10)+'.csv','﻿STT;Tên;Mã;Ngày tạo;Trạng thái\n'+LIST.map((x,i)=>[i+1,x.name||'',x.code,x.created||'',x.revoked?'Đã xoá':'Đang dùng'].join(';')).join('\n'),'text/csv');
+  $('#upCSV').onchange=async e=>{const f=e.target.files[0];if(!f)return;const t=await f.text();let n=0;
+    for(const line of t.split(/\r?\n/).slice(1)){const c=line.split(';');if(c.length<3||!c[2])continue;const code=c[2].trim();if(LIST.some(x=>normCode(x.code)===normCode(code)))continue;
+      const {id}=await Auth.derive(code,KR);LIST.push({code,name:c[1],id,created:c[3]||'',revoked:/xoá/i.test(c[4]||'')});n++}
+    saveList();toast('Đã nhập '+n+' mã');view()};
+  $('#print').onclick=()=>{$('#printArea').innerHTML=LIST.filter(x=>!x.revoked&&x.role!=='gv').map(x=>`<div class="slip">Vocabulary 12 · ${esc(x.name||'')}<br>Mã đăng nhập: <b>${esc(x.code)}</b><br><small>Mở app → nhập mã. Chỉ dùng cho học sinh có tên trên phiếu.</small></div>`).join('')||'<p>Chưa có mã học sinh.</p>';window.print()};
+  $('#gen').onclick=generate;
+  document.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{const x=LIST[+b.dataset.del];if(!confirm('Xoá mã '+x.code+(x.name?' ('+x.name+')':'')+'?'))return;
+    KR.entries=KR.entries.filter(e=>e.id!==x.id);
+    if(PUB.has(x.id))x.revoked=true;else LIST.splice(+b.dataset.del,1);   // mã chưa từng lên GitHub thì bỏ hẳn khỏi danh sách
+    saveList();dirty=true;view()});
+  document.querySelectorAll('[data-hide]').forEach(b=>b.onclick=()=>{LIST.splice(+b.dataset.hide,1);saveList();view()});
+  $('#rotate').onclick=rotate;
+}
+
+async function generate(){
+  const btn=$('#gen');btn.disabled=true;btn.textContent='Đang tạo…';
+  const prefix=normCode($('#prefix').value).slice(0,6);
+  const names=$('#names').value.split('\n').map(s=>s.trim()).filter(Boolean);
+  const manual=$('#manual').value.split('\n').map(s=>s.trim()).filter(Boolean).map(l=>{const [c,...n]=l.split(';');return{code:c.trim(),name:n.join(';').trim()}});
+  let items=manual.length?manual:(names.length?names.map(n=>({name:n})):Array.from({length:Math.min(200,Math.max(1,+$('#qty').value||1))},()=>({name:''})));
+  let made=0,skip=[];
+  for(const it of items){
+    const code=it.code||genCode(prefix);
+    if(normCode(code).length<6){skip.push(code+' (quá ngắn)');continue}
+    const ent=await wrapEntry(code,KR,RAW);
+    if(KR.entries.some(e=>e.id===ent.id)){skip.push(code+' (trùng)');continue}
+    const old=LIST.find(x=>x.id===ent.id);
+    if(old){KR.entries.push(ent);old.revoked=false;if(it.name)old.name=it.name;made++;continue}   // mã đã xoá nay dùng lại: khôi phục dòng cũ, không tạo dòng trùng
+    KR.entries.push(ent);LIST.push({code:code.toUpperCase(),name:it.name,id:ent.id,created:new Date().toISOString().slice(0,10)});made++;
+  }
+  saveList();dirty=true;view();
+  toast('Đã tạo '+made+' mã'+(skip.length?'. Bỏ qua: '+skip.join(', '):'')+'. Nhớ tải keyring.json lên GitHub.',5000);
+}
+
+/* ---------- đổi khoá ---------- */
+async function rotate(){
+  const act=LIST.filter(x=>!x.revoked);
+  const unknown=KR.entries.filter(e=>!LIST.some(x=>x.id===e.id)).length;
+  if(!confirm(`Đổi khoá?\n\n• ${act.length} mã đang dùng trong danh sách sẽ được giữ lại.\n${unknown?`• ${unknown} mã không có trong danh sách trên máy này sẽ BỊ THU HỒI.\n`:''}• Mọi máy phải nhập lại mã (tiến độ vẫn giữ).`))return;
+  const msg=$('#rotMsg');msg.textContent='Đang tải và giải mã nội dung…';
+  try{
+    const cat=await fetchEnc('content/catalog.bin',KEY);
+    const names=['catalog','gloss',...cat.parts.flatMap(p=>p.units.filter(u=>u.ready).map(u=>u.id)),...(cat.topics||[]).filter(t=>t.ready).map(t=>t.id)];
+    const newRaw=crypto.getRandomValues(new Uint8Array(32)).buffer;
+    const newKey=await crypto.subtle.importKey('raw',newRaw,'AES-GCM',true,['encrypt','decrypt']);
+    const files=[];
+    for(const n of names){msg.textContent='Đang mã hoá lại '+n+'…';const obj=await fetchEnc('content/'+n+'.bin',KEY);files.push({name:'content/'+n+'.bin',data:await encJSON(obj,newKey)})}
+    const ver=[...crypto.getRandomValues(new Uint8Array(4))].map(b=>b.toString(16).padStart(2,'0')).join('');
+    const kr={v:1,keyVersion:ver,kdf:{alg:'PBKDF2-SHA256',iter:KR.kdf.iter},salt:b64e(crypto.getRandomValues(new Uint8Array(16))),entries:[]};
+    for(const x of act){msg.textContent='Đang tạo lại mã '+x.code+'…';const e=await wrapEntry(x.code,kr,newRaw);x.id=e.id;kr.entries.push(e)}
+    files.push({name:'content/keyring.json',data:new TextEncoder().encode(JSON.stringify(kr,null,1))});
+    downloadBlob('vocab12-content-khoa-moi.zip',makeZip(files),'application/zip');
+    const keyTxt='V12-KHOA-NOI-DUNG\n# KHOÁ NỘI DUNG — GIỮ RIÊNG TƯ. Không tải lên GitHub, không gửi cho học sinh.\nkey: '+b64e(newRaw)+'\nversion: '+ver+'\n';
+    setTimeout(()=>downloadBlob('KHOA-NOI-DUNG.txt',keyTxt,'text/plain'),800);
+    LIST=LIST.filter(x=>!x.revoked);saveList();
+    KR=kr;RAW=newRaw;KEY=newKey;dirty=false;
+    msg.textContent='';view();
+    toast('Đã tạo nội dung với khoá mới. Tải thư mục content trong file zip lên GitHub (ghi đè toàn bộ).',7000);
+  }catch(e){msg.textContent='Lỗi: '+e.message}
+}
+
+/* ---------- ZIP (không nén) ---------- */
+const CRC=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+function crc32(u){let c=0xFFFFFFFF;for(let i=0;i<u.length;i++)c=CRC[(c^u[i])&255]^(c>>>8);return(c^0xFFFFFFFF)>>>0}
+function makeZip(files){
+  const enc=new TextEncoder(),parts=[],cen=[];let off=0;
+  for(const f of files){const name=enc.encode(f.name),d=f.data instanceof Uint8Array?f.data:new Uint8Array(f.data),crc=crc32(d);
+    const h=new DataView(new ArrayBuffer(30));h.setUint32(0,0x04034b50,true);h.setUint16(4,20,true);h.setUint16(6,0x0800,true);h.setUint16(8,0,true);h.setUint32(14,crc,true);h.setUint32(18,d.length,true);h.setUint32(22,d.length,true);h.setUint16(26,name.length,true);
+    parts.push(new Uint8Array(h.buffer),name,d);
+    const c=new DataView(new ArrayBuffer(46));c.setUint32(0,0x02014b50,true);c.setUint16(4,20,true);c.setUint16(6,20,true);c.setUint16(8,0x0800,true);c.setUint32(16,crc,true);c.setUint32(20,d.length,true);c.setUint32(24,d.length,true);c.setUint16(28,name.length,true);c.setUint32(42,off,true);
+    cen.push(new Uint8Array(c.buffer),name);off+=30+name.length+d.length}
+  const cenSize=cen.reduce((s,x)=>s+x.length,0);const e=new DataView(new ArrayBuffer(22));e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,cenSize,true);e.setUint32(16,off,true);
+  return new Blob([...parts,...cen,new Uint8Array(e.buffer)],{type:'application/zip'});
+}
+start();
+</script>
+</body>
+</html>

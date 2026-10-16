@@ -19,7 +19,7 @@ const Review = {
       let ds = shuffle(same.filter(x => v.type === 'phrase' || x.pos === v.pos)).slice(0, 3).map(x => x.cloze);
       if (ds.length < 3) ds = ds.concat(shuffle(same).map(x => x.cloze).filter(x => !ds.includes(x))).slice(0, 3);
       const opts = shuffle([v.cloze, ...ds]);
-      return { kind: 'mc', title: 'Điền từ vào câu', stem: esc(blank), sub: esc(v.tr), opts, ans: opts.indexOf(v.cloze) };
+      return { kind: 'mc', title: 'Điền từ vào câu', stem: esc(blank), sub: '', opts, ans: opts.indexOf(v.cloze) };
     }
     if (item.qt === 'syn' && v.syn) {
       const useAnt = (S.words[v.id].reviews || 0) % 2 === 1 && v.ant && v.ant.length;
@@ -58,7 +58,7 @@ const Review = {
       let fb = '';
       if (st.ans !== null) {
         fb = `<div class="verdict ${st.ans ? 'ok' : 'no'}">${st.ans ? 'Đúng. Hẹn ôn lại sau ' + INTERVALS[S.words[v.id].box] + ' ngày.' : 'Chưa đúng. Từ này quay lại sau 1 ngày và được ghi vào Sổ câu sai.'}</div>
-      <div class="small"><b>${esc(v.word)}</b> · ${esc(v.meaning)}<br><span class="muted">${highlight(v.ex, v.cloze)}</span></div>
+      ${answerInfoHTML(v)}
       <div class="row end"><button class="btn" type="button" id="rvNext">${st.i + 1 < st.queue.length ? 'Câu tiếp ›' : 'Xem kết quả ›'}</button></div>`
       }
       body = `<div class="progress"><i style="width:${st.i / st.queue.length * 100}%"></i></div>

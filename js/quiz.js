@@ -25,7 +25,7 @@ function makeWordQ(v, qt, seed) {
     let ds = shuffle(same.filter(x => v.type === 'phrase' || x.pos === v.pos)).slice(0, 3).map(x => x.cloze);
     if (ds.length < 3) ds = ds.concat(shuffle(same).map(x => x.cloze).filter(x => !ds.includes(x))).slice(0, 3);
     const opts = shuffle([v.cloze, ...ds]);
-    return { kind: 'mc', qt, title: 'Điền từ vào câu', stem, sub: esc(v.tr), opts, ans: opts.indexOf(v.cloze), right: v.cloze };
+    return { kind: 'mc', qt, title: 'Điền từ vào câu', stem, sub: '', opts, ans: opts.indexOf(v.cloze), right: v.cloze };
   }
   if (qt === 'syn') {
     const useAnt = (seed ?? Math.random() * 2 | 0) % 2 === 1 && v.ant && v.ant.length;
@@ -135,7 +135,7 @@ const Quiz = {
       const a = r.ans[i], v = wordById(it.wid);
       if (a && a.ok) return '';
       return `<div class="wrong"><div class="row"><span class="tag">${a ? 'Sai' : 'Bỏ trống'}</span><span class="tag src2">${esc(qtName(it.q.qt))}</span><span class="tag unit">${esc(unitLabel(v.unit, true))}</span></div>
-       <div><b>${esc(v.word)}</b> · ${esc(v.meaning)}</div>${a ? `<div class="small" style="color:var(--bad)">Bạn trả lời: ${esc(a.val || '(trống)')}</div>` : ''}<div class="small muted">${highlight(v.ex, v.cloze)}</div></div>`
+       ${a ? `<div class="small" style="color:var(--bad)">Bạn trả lời: ${esc(a.val || '(trống)')}</div>` : ''}${answerInfoHTML(v)}</div>`
     }).join('');
     el.innerHTML = `<div class="panel" style="display:grid;gap:8px"><div class="label">Kết quả kiểm tra</div><div class="score">${(right / N * 10).toFixed(1)} điểm</div>
      <p class="muted small" style="margin:0">Đúng ${right}/${N} câu${blank ? ` · bỏ trống ${blank}` : ''} · thời gian ${Math.floor(secs / 60)} phút ${secs % 60} giây. Câu sai đã vào Sổ câu sai.</p>

@@ -23,29 +23,36 @@
 <div class="wrap">
   <div class="bar2">
     <div class="row"><h2 style="font-size:19px" class="grow">Duyệt bản dịch Đọc bài</h2><a class="btn ghost sm" href="index.html">Về app</a></div>
-    <p class="small muted" style="margin:0">Bản dịch câu và cụm do Claude soạn. Thầy/cô sửa trực tiếp, tick “Đã duyệt” cho câu đạt. Xong bấm <b>Tải file nội dung</b> rồi tải file đó lên thư mục <code>content/</code> trên GitHub (ghi đè file cũ); đồng thời gửi file <b>bản dịch .txt</b> cho Claude để lưu vào công cụ.</p>
+    <p class="small muted" style="margin:0">Bản dịch câu và cụm do Claude soạn. Thầy/cô sửa trực tiếp, tick “Đã duyệt” cho câu đạt. Xong bấm <b>Tải file nội dung (.bin)</b> rồi tải file đó lên thư mục <code>content/</code> trên GitHub (ghi đè file cũ; file đã được mã hoá); đồng thời gửi file <b>bản dịch .txt</b> cho Claude để lưu vào bộ nguồn.</p>
     <div class="row"><select class="input" id="unitSel" style="max-width:320px"></select><span class="small muted grow" id="stat"></span></div>
-    <div class="row"><button class="btn" type="button" id="dlJson">Tải file nội dung (.json)</button><button class="btn soft" type="button" id="dlTxt">Tải file bản dịch (.txt)</button><label class="row small"><input type="checkbox" id="onlyTodo"> Chỉ hiện câu chưa duyệt</label></div>
+    <div class="row"><button class="btn" type="button" id="dlJson">Tải file nội dung (.bin)</button><button class="btn soft" type="button" id="dlTxt">Tải file bản dịch (.txt)</button><label class="row small"><input type="checkbox" id="onlyTodo"> Chỉ hiện câu chưa duyệt</label></div>
   </div>
   <div id="list" class="sec"></div>
 </div>
 <div class="toast" id="toast" hidden></div>
+<script src="js/auth.js"></script>
 <script>
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let D=null, CAT=null;
 const KEY=id=>'v12-duyet-'+id;
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.hidden=false;setTimeout(()=>t.hidden=true,2500)}
 async function init(){
-  CAT=await (await fetch('content/catalog.json',{cache:'no-cache'})).json();
+  if(!Auth.supported()){document.getElementById('list').innerHTML='<div class="notice">Trình duyệt không hỗ trợ giải mã.</div>';return}
+  if(!(await Auth.restore())) return loginForm();
+  try{CAT=await fetchEnc('content/catalog.bin')}catch(e){if(e.kind==='key'){Auth.logout();return loginForm('Mã cũ không còn dùng được. Hãy nhập lại.')}throw e}
   const sel=document.getElementById('unitSel');
-  sel.innerHTML=CAT.parts.flatMap(p=>p.units.filter(u=>u.ready).map(u=>`<option value="${u.id}">Part ${p.part} · Unit ${u.unit} · ${esc(u.title)}</option>`)).join('');
+  sel.innerHTML=CAT.parts.flatMap(p=>p.units.filter(u=>u.ready).map(u=>`<option value="${u.id}">Part ${p.part} · Unit ${u.unit} · ${esc(u.title)}</option>`)).join('')+(CAT.topics||[]).filter(t=>t.ready).map(t=>`<option value="${t.id}">Tài liệu chủ đề · ${esc(t.title)}</option>`).join('');
   sel.onchange=()=>load(sel.value); load(sel.value);
   document.getElementById('onlyTodo').onchange=render;
-  document.getElementById('dlJson').onclick=()=>download(D.id+'.json',JSON.stringify(D),'application/json');
+  document.getElementById('dlJson').onclick=async()=>download(D.id+'.bin',await encJSON(D),'application/octet-stream');
   document.getElementById('dlTxt').onclick=()=>download(D.id+'.txt',toTxt(),'text/plain');
 }
+function loginForm(msg){
+  document.getElementById('list').innerHTML=`<form id="lf" class="panel" style="display:grid;gap:10px;max-width:420px"><b>Đăng nhập bằng mã giáo viên</b>${msg?`<div class="notice">${esc(msg)}</div>`:''}<input class="input" id="lc" placeholder="Mã giáo viên" autocapitalize="characters"><div id="le" class="small" style="color:var(--bad)"></div><button class="btn">Đăng nhập</button></form>`;
+  document.getElementById('lf').onsubmit=async e=>{e.preventDefault();const r=await Auth.login(document.getElementById('lc').value);if(!r.ok){document.getElementById('le').textContent=r.msg;return}init()};
+}
 async function load(id){
-  D=await (await fetch('content/'+id+'.json',{cache:'no-cache'})).json();
+  D=await fetchEnc('content/'+id+'.bin');
   try{const saved=JSON.parse(localStorage.getItem(KEY(id))||'null');if(saved&&saved.hash===D.contentHash)applySaved(saved.edits)}catch(e){}
   render();
 }

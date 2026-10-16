@@ -81,7 +81,7 @@ const Notebook = {
       box.innerHTML = `<div style="display:grid;gap:10px;margin-top:8px">${wordQHTML(q, v, 'nb')}<div id="nbFb"></div></div>`;
       const after = (ok, val) => {
         result(ok); if (!ok) w.chosen = val; if (w.kind === 'rv') grade(v.id, ok);
-        box.querySelector('#nbFb').innerHTML = `<div class="verdict ${ok ? 'ok' : 'no'}">${ok ? 'Đúng' : 'Chưa đúng. Đáp án: ' + esc(q.right)}</div><div class="small"><b>${esc(v.word)}</b> · ${esc(v.meaning)}<br><span class="muted">${highlight(v.ex, v.cloze)}</span></div>`;
+        box.querySelector('#nbFb').innerHTML = `<div class="verdict ${ok ? 'ok' : 'no'}">${ok ? 'Đúng' : 'Chưa đúng. Đáp án: ' + esc(q.right)}</div>${answerInfoHTML(v)}`;
       };
       box.querySelectorAll('[data-nb]').forEach(b => b.onclick = () => { const i = +b.dataset.nb; lockMC(box, 'nb', i, q.ans); after(i === q.ans, q.opts[i]) });
       const f = box.querySelector('[data-nbf]');

@@ -25,32 +25,47 @@ function questionBody(q) {
   return h;
 }
 const Practice = {
-  st: null, view: 'book', unit: null,
+  st: null, view: 'book', unit: null, topicId: null,
   open(setId, mode) { this.view = 'book'; this.init(setId, mode) },
-  init(set, mode) { this.st = { unit: U.id, set, mode, i: 0, ans: {}, submitted: false, start: Date.now() } },
-  set() { return U.setById[this.st.set] || U.sets[0] },
+  openTopic(tid, setId, mode) { this.view = 'topic'; this.topicId = tid; this.st = null; this.init(setId, mode || 'practice') },
+  D() { return this.view === 'topic' ? UNITS[this.topicId] : U },
+  init(set, mode) { const D = this.D(); this.st = { unit: D ? D.id : U.id, set, mode, i: 0, ans: {}, submitted: false, start: Date.now() } },
+  set() { const D = this.D(); return D.setById[this.st.set] || D.sets[0] },
   render(el) {
     clearInterval(this.timer);
-    const top = `<div class="seg"><button type="button" class="chip" data-view="book" aria-pressed="${this.view === 'book'}">Bài tập trong sách</button><button type="button" class="chip" data-view="test" aria-pressed="${this.view === 'test'}">Kiểm tra từ vựng</button></div>`;
+    const tps = availableTopics();
+    const top = `<div class="seg"><button type="button" class="chip" data-view="book" aria-pressed="${this.view === 'book'}">Bài tập trong sách</button>${tps.length ? `<button type="button" class="chip" data-view="topic" aria-pressed="${this.view === 'topic'}">Tài liệu chủ đề</button>` : ''}<button type="button" class="chip" data-view="test" aria-pressed="${this.view === 'test'}">Kiểm tra từ vựng</button></div>`;
     if (this.view === 'test') {
       el.innerHTML = `<section class="sec">${top}<div id="qz"></div></section>`;
       this.bindTop(el); Quiz.render(el.querySelector('#qz')); return;
     }
-    if (!U.sets || !U.sets.length) { el.innerHTML = `<section class="sec">${top}<div class="panel muted">Unit này chưa có bài tập.</div></section>`; this.bindTop(el); return }
-    if (!this.st || this.st.unit !== U.id || !U.setById[this.st.set]) this.init(U.sets[0].id, this.st ? this.st.mode : 'practice');
+    if (this.view === 'topic') {
+      if (!this.topicId || !tps.some(t => t.id === this.topicId)) this.topicId = tps[0] && tps[0].id;
+      if (!UNITS[this.topicId]) {
+        el.innerHTML = `<section class="sec">${top}<p class="muted">Đang tải tài liệu…</p></section>`; this.bindTop(el);
+        loadUnit(this.topicId).then(() => { if (tab === 'practice' && this.view === 'topic') this.render(el) }).catch(() => { el.querySelector('p').textContent = 'Không tải được tài liệu. Kiểm tra mạng rồi thử lại.' });
+        return;
+      }
+    }
+    const D = this.D();
+    if (!D.sets || !D.sets.length) { el.innerHTML = `<section class="sec">${top}<div class="panel muted">Chưa có bài tập.</div></section>`; this.bindTop(el); return }
+    if (!this.st || this.st.unit !== D.id || !D.setById[this.st.set]) this.init(D.sets[0].id, this.st ? this.st.mode : 'practice');
     const st = this.st, set = this.set();
-    const head = `${top}<div class="sec-h"><div><h2>Bài tập trong sách</h2><p>Câu hỏi, đáp án và lời giải lấy đúng từ tài liệu.</p></div></div>
-   <div class="seg">${U.sets.map(s => `<button type="button" class="chip" data-set="${s.id}" aria-pressed="${st.set === s.id}">${esc(s.short || s.name)} · ${s.qs.length} câu</button>`).join('')}</div>
+    const isTopic = this.view === 'topic';
+    const head = `${top}<div class="sec-h"><div><h2>${isTopic ? esc(D.title) : 'Bài tập trong sách'}</h2><p>${isTopic ? 'Tài liệu rèn đọc hiểu theo chủ đề, có đáp án và lời giải chi tiết.' : 'Câu hỏi, đáp án và lời giải lấy đúng từ tài liệu.'}</p></div></div>
+   ${isTopic && tps.length > 1 ? `<div class="seg">${tps.map(t => `<button type="button" class="chip" data-tp="${t.id}" aria-pressed="${t.id === this.topicId}">${esc(t.title)}</button>`).join('')}</div>` : ''}
+   <div class="seg">${D.sets.map(s => `<button type="button" class="chip" data-set="${s.id}" aria-pressed="${st.set === s.id}">${esc(s.short || s.name)} · ${s.qs.length} câu</button>`).join('')}</div>
    <div class="seg"><button type="button" class="chip" data-mode="practice" aria-pressed="${st.mode === 'practice'}">Luyện tập: chấm từng câu</button><button type="button" class="chip" data-mode="exam" aria-pressed="${st.mode === 'exam'}">Thi thử: tính giờ</button></div>
    ${set.intro ? `<p class="small muted" style="margin:0">${inl(set.intro)}</p>` : ''}`;
     const body = st.mode === 'practice' ? this.practiceHTML(set) : this.examHTML(set);
     el.innerHTML = `<section class="sec">${head}${body}</section>`;
     this.bindTop(el);
+    el.querySelectorAll('[data-tp]').forEach(b => b.onclick = () => { this.topicId = b.dataset.tp; this.st = null; this.render(el) });
     el.querySelectorAll('[data-set]').forEach(b => b.onclick = () => { this.init(b.dataset.set, st.mode); this.render(el) });
     el.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { this.init(st.set, b.dataset.mode); this.render(el) });
     this.bind(el, set);
   },
-  bindTop(el) { el.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { this.view = b.dataset.view; this.render(el); window.scrollTo({ top: 0 }) }) },
+  bindTop(el) { el.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { this.view = b.dataset.view; this.st = null; this.render(el); window.scrollTo({ top: 0 }) }) },
   qPanel(set, q, idx, total, chosen, show) {
     const ctx = set.type === 'reading' ? 'Câu hỏi về bài đọc "' + (set.passages[q.p || 0] || {}).title + '":\n' + passagePlain(set, q.p || 0) : set.type === 'cloze' ? 'Đoạn văn có chỗ trống (' + q.n + ').' : '';
     return `<div class="panel" style="display:grid;gap:12px" data-qi="${idx}">
@@ -85,7 +100,8 @@ const Practice = {
   },
   bind(el, set) {
     const st = this.st;
-    const logWrong = (q, i) => addWrong({ key: U.id + '|' + set.id + '|' + q.n, unit: U.id, kind: 'q', set: set.id, n: q.n, src: set.short || set.name, group: q.group, chosen: plain(q.opts[i]) });
+    const D = this.D();
+    const logWrong = (q, i) => addWrong({ key: D.id + '|' + set.id + '|' + q.n, unit: D.id, kind: 'q', set: set.id, n: q.n, src: (D.kind === 'topic' ? (unitMeta(D.id).topic || 'Chủ đề') + ' · ' : '') + (set.short || set.name), group: q.group, chosen: plain(q.opts[i]) });
     if (st.mode === 'practice') {
       const q = set.qs[st.i];
       if (st.ans[st.i] !== undefined) lockMC(el, 'pq', st.ans[st.i], q.ans);
@@ -107,7 +123,7 @@ const Practice = {
         clearInterval(this.timer); st.submitted = true; st.end = Date.now();
         set.qs.forEach((q, i) => { if (st.ans[i] !== undefined && st.ans[i] !== q.ans) logWrong(q, st.ans[i]) });
         const right = set.qs.filter((x, i) => st.ans[i] === x.ans).length;
-        S.tests.push({ kind: 'book', unit: U.id, set: set.id, name: set.short || set.name, right, total: set.qs.length, secs: Math.round((st.end - st.start) / 1000), day: today() }); S.tests = S.tests.slice(-50); save();
+        S.tests.push({ kind: 'book', unit: D.id, set: set.id, name: set.short || set.name, right, total: set.qs.length, secs: Math.round((st.end - st.start) / 1000), day: today() }); S.tests = S.tests.slice(-50); save();
         renderStrip(); this.render(el); window.scrollTo({ top: 0 })
       };
     } else {

@@ -49,11 +49,17 @@ function openSettings() {
      <p class="small muted" style="margin:0">Dữ liệu lấy từ bộ Tài liệu Reading – Vocabulary 12. Bản dịch có nhãn “Claude soạn” đang chờ giáo viên duyệt.</p>
      <button class="btn ghost sm" type="button" id="allNews" style="justify-self:start">Xem lịch sử cập nhật</button>
    </div>
+   <div class="panel" style="display:grid;gap:8px">
+     <div class="label">Tài khoản</div>
+     <p class="small muted" style="margin:0">Máy này đã đăng nhập bằng mã của giáo viên cấp. Đăng xuất không xoá tiến độ học.</p>
+     <button class="btn ghost sm" type="button" id="logoutBtn" style="justify-self:start">Đăng xuất khỏi máy này</button>
+   </div>
    <div id="teacher"></div>`;
   openModal(html, m => {
     m.querySelectorAll('[data-ai-p]').forEach(b => b.onclick = () => { S.settings.ai = b.dataset.aiP; save(); m.querySelectorAll('[data-ai-p]').forEach(x => x.setAttribute('aria-pressed', x === b)); toast('Đã chọn ' + AI_PROVIDERS[S.settings.ai].name) });
     const sn = m.querySelector('#seenNews'); if (sn) sn.onclick = () => { markNewsSeen(); openSettings() };
     m.querySelector('#allNews').onclick = () => openNews(true);
+    let lo = false; m.querySelector('#logoutBtn').onclick = e => { if (!lo) { lo = true; e.target.textContent = 'Bấm lần nữa để đăng xuất'; setTimeout(() => { lo = false; e.target.textContent = 'Đăng xuất khỏi máy này' }, 3000); return } logout() };
     m.querySelector('#bkFile').onclick = () => {
       const blob = new Blob([JSON.stringify({ app: 'vocab12', at: new Date().toISOString(), state: S })], { type: 'application/json' });
       const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'vocab12-saoluu-' + new Date().toISOString().slice(0, 10) + '.json';
@@ -84,7 +90,7 @@ function renderTeacher(box) {
    <div class="label">Công cụ giáo viên</div>
    <p class="small muted" style="margin:0">Chỉ dùng khi kiểm tra app. Ngày giả lập hiện tại: lệch ${S.dayOff || 0} ngày.</p>
    <div class="row"><button class="btn ghost sm" type="button" id="tNext">Giả lập: sang ngày hôm sau</button><button class="btn ghost sm" type="button" id="tToday">Về ngày thật</button></div>
-   <div class="row"><a class="btn ghost sm" href="duyet.html" target="_blank" rel="noopener">Trang duyệt bản dịch</a><button class="btn danger sm" type="button" id="tReset">Xoá toàn bộ tiến độ</button></div></div>`;
+   <div class="row"><a class="btn ghost sm" href="duyet.html" target="_blank" rel="noopener">Trang duyệt bản dịch</a><a class="btn ghost sm" href="quan-ly-ma.html" target="_blank" rel="noopener">Quản lý mã</a><button class="btn danger sm" type="button" id="tReset">Xoá toàn bộ tiến độ</button></div></div>`;
   box.querySelector('#tNext').onclick = () => { S.dayOff = (S.dayOff || 0) + 1; save(); toast('Đã chuyển sang ngày hôm sau (giả lập)'); renderTeacher(box); render() };
   box.querySelector('#tToday').onclick = () => { S.dayOff = 0; save(); toast('Đã về ngày thật'); renderTeacher(box); render() };
   let arm = false;
@@ -101,7 +107,7 @@ function pendingNews() {
   const out = [];
   if (!S.seen.app) return out; // lần đầu mở app: không báo tin cũ
   (CATALOG.changes || []).forEach(c => { if (verCmp(c.version, S.seen.app) > 0 && verCmp(c.version, APP_VERSION) <= 0) out.push(c) });
-  availableUnits().forEach(u => { const seen = S.seen.units[u.id]; if (seen && seen !== u.contentVersion && u.changes && u.changes.length) out.push({ unit: u.id, version: u.contentVersion, items: u.changes }) });
+  availableUnits().concat(availableTopics()).forEach(u => { const seen = S.seen.units[u.id]; if (seen && seen !== u.contentVersion && u.changes && u.changes.length) out.push({ unit: u.id, version: u.contentVersion, items: u.changes }) });
   return out;
 }
 function newsHTML(list) {
@@ -109,7 +115,7 @@ function newsHTML(list) {
 }
 function markNewsSeen() {
   S.seen.app = APP_VERSION;
-  availableUnits().forEach(u => S.seen.units[u.id] = u.contentVersion);
+  availableUnits().concat(availableTopics()).forEach(u => S.seen.units[u.id] = u.contentVersion);
   save(); updateNewsDot();
 }
 function updateNewsDot() { const n = pendingNews().length; $('#newDot').hidden = !n; renderBanner() }
